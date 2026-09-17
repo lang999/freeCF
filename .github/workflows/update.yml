@@ -28,12 +28,44 @@ jobs:
         run: |
           pip install -r scripts/requirements.txt
 
-      - name: Run Real-Prober and Classifier (sing-box v1.14 全协议)
+      # ═══════════════════════════════════════════════════════════════
+      # ★ 大陆出口代理自动发现 (免费代理寿命以小时计, 每次运行前刷新)
+      #   找到 → 写 CN_PROXY 到 $GITHUB_ENV (最多 5 个, main_v3 自动轮换)
+      #   没找到 → 写 CN_FILTER=off, 过滤层自动跳过, 不影响主流程
+      #   该步骤永不失败 (拿不到代理 = 只是失去过滤层, 不是错误)
+      # ═══════════════════════════════════════════════════════════════
+      - name: Discover CN Exit Proxy (大陆出口代理发现)
+        continue-on-error: true
         run: |
-          python scripts/main_v2.py
+          python scripts/cn_proxy_hunter.py --ci --out runtime/cn_proxies.json
+        env:
+          PYTHONUNBUFFERED: '1'
+
+      # 可选: 若在仓库 Secrets 里配置了 CN_PROXY (如自建 VPS), 优先使用它 (比免费代理稳)
+      - name: CN Proxy Fallback (optional 自建出口优先)
+        if: always()
+        env:
+          FALLBACK_CN_PROXY: ${{ secrets.CN_PROXY }}
+        run: |
+          if [ -z "$FALLBACK_CN_PROXY" ]; then
+            echo "[-] 未配置 secrets.CN_PROXY, 沿用自动发现的出口"
+            exit 0
+          fi
+          if [ -f "$GITHUB_ENV" ]; then
+            grep -v '^CN_PROXY=' "$GITHUB_ENV" > "${GITHUB_ENV}.tmp" 2>/dev/null || true
+            mv "${GITHUB_ENV}.tmp" "$GITHUB_ENV" 2>/dev/null || true
+          fi
+          echo "CN_PROXY=${FALLBACK_CN_PROXY}" >> "$GITHUB_ENV"
+          echo "[+] 使用 secrets.CN_PROXY (自建/指定出口) 覆盖自动发现结果"
+
+      - name: Run Real-Prober and Classifier (sing-box v1.14 全协议 + 大陆视角复核)
+        run: |
+          python scripts/main_v3.py
         env:
           # 便于 ip-api 等识别限速; GitHub runner 出口为美国 Azure
           PYTHONUNBUFFERED: '1'
+          # CN_PROXY / CN_FILTER 由上一步写入 $GITHUB_ENV, 此处无需重复声明
+          # (main_v3.py: 未设 CN_PROXY 时自动跳过大陆过滤层, 只做海外测活)
 
       - name: Upload test artifacts (调试用, 7天保留)
         uses: actions/upload-artifact@v4
@@ -42,6 +74,7 @@ jobs:
           name: run-report
           path: |
             output/e2e_test_report.json
+            runtime/cn_proxies.json
           retention-days: 7
           if-no-files-found: ignore
 
