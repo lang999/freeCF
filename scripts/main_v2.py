@@ -62,7 +62,6 @@ SOURCE_URLS = [
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/freefq/free/master/v2",
     "https://open.heleimail.workers.dev/",
-    "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/karing节点.txt",
     "https://www.ermao.net/sub/v2ray/ermao.net",
 ]
 
@@ -553,10 +552,12 @@ def _parse_tls_params(params: dict, host: str) -> dict:
         pbk = params.get("pbk", "")
         if not pbk:
             return None
+        # ★ 修复: fp= 空值导出空串 → mihomo 校验失败整份配置拒绝加载; 回退 chrome
+        fp = (params.get("fp") or "chrome").strip() or "chrome"
         tls = {
             "enabled": True,
             "server_name": params.get("sni", params.get("peer", host)),
-            "utls": {"enabled": True, "fingerprint": params.get("fp", "chrome")},
+            "utls": {"enabled": True, "fingerprint": fp},
             "reality": {"enabled": True, "public_key": pbk, "short_id": params.get("sid", "")},
         }
     elif security in ("tls", "xtls"):
@@ -580,13 +581,26 @@ def _parse_transport(params: dict) -> dict:
         return None
     if network == "ws":
         t = {"type": "ws"}
-        if params.get("path"):
-            t["path"] = urllib.parse.unquote(params["path"])
+        raw_path = params.get("path", "")
+        if raw_path:
+            p = urllib.parse.unquote(raw_path)
+            # ★ 修复: 源站生成器坏拼接 (缺&) — path 尾部粘连 "security=tls"(可能带尾随空格)
+            #   实测形态 "/?ed=2560security=tls" 导致后端 404 → v2rayN/Clash 全不通
+            p = re.sub(r"security=tls\s*$", "", p).rstrip()
+            t["path"] = p or "/"
         if params.get("host"):
             t["headers"] = {"Host": params["host"]}
         # 0-RTT early data (v2ray ws 0-RTT: path 含 ?ed=2560 时由 max-early-data 指定)
+        #   v2rayN/Xray 自动从 path 提取 ed; sing-box/Clash 需显式 max_early_data
+        m_ed = re.search(r"[?&]ed=(\d+)", t.get("path", ""))
         if params.get("ed"):
-            t["max_early_data"] = 2560
+            try:
+                t["max_early_data"] = int(params["ed"]) or 2560
+            except ValueError:
+                t["max_early_data"] = 2560
+            t["early_data_header_name"] = "Sec-WebSocket-Protocol"
+        elif m_ed:
+            t["max_early_data"] = int(m_ed.group(1))
             t["early_data_header_name"] = "Sec-WebSocket-Protocol"
         return t
     if network in ("grpc", "gun"):
@@ -649,12 +663,16 @@ def parse_vmess(uri: str):
     port = int(data.get("port", 0) or 0)
     if not server or port <= 0:
         return None
+    # ★ 修复: 非法 uuid 占位符 (tmp_user 等) — mihomo 校验失败会拒绝整份配置
+    uid = str(data.get("id", "")).strip()
+    if not re.match(r"^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$", uid):
+        return None
     outbound = {
         "type": "vmess",
         "tag": "node",
         "server": server,
         "server_port": port,
-        "uuid": str(data.get("id", "")).strip(),
+        "uuid": uid,
         "security": "auto",
     }
     aid = int(data.get("aid", 0) or 0)
@@ -1641,14 +1659,16 @@ def outbound_to_clash(node: dict, name: str) -> dict:
             if tls["reality"].get("short_id"):
                 proxy["reality-opts"]["short-id"] = tls["reality"]["short_id"]
             proxy["servername"] = tls.get("server_name") or server
-            if tls.get("utls"):
-                proxy["client-fingerprint"] = tls["utls"].get("fingerprint", "chrome")
+            # ★ 修复: fp 空串校验失败 → mihomo 整份配置拒绝加载 (OpenClash 全部线路不通)
+            fp_v = (tls.get("utls") or {}).get("fingerprint") or "chrome"
+            if str(fp_v).strip():
+                proxy["client-fingerprint"] = str(fp_v).strip()
         elif tls.get("enabled"):
             proxy["tls"] = True
             proxy["servername"] = tls.get("server_name") or server
             proxy["skip-cert-verify"] = bool(tls.get("insecure"))
-            if tls.get("utls"):
-                proxy["client-fingerprint"] = tls["utls"].get("fingerprint", "chrome")
+            if tls.get("utls") and str((tls["utls"].get("fingerprint") or "")).strip():
+                proxy["client-fingerprint"] = tls["utls"]["fingerprint"].strip()
         transport = node.get("transport") or {}
         if transport.get("type"):
             proxy["network"] = transport["type"]
@@ -1656,6 +1676,12 @@ def outbound_to_clash(node: dict, name: str) -> dict:
                 proxy["ws-opts"] = {"path": transport.get("path", "/")}
                 if transport.get("headers"):
                     proxy["ws-opts"]["headers"] = transport["headers"]
+                # ★ 修复: 0-RTT early data 必须显式导出 (v2rayN 从 path 自动提取所以能通,
+                #   mihomo/OpenClash 不解析 path 内 ?ed= → 缺此字段即握手不通)
+                if transport.get("max_early_data"):
+                    proxy["ws-opts"]["max-early-data"] = int(transport["max_early_data"])
+                    proxy["ws-opts"]["early-data-header-name"] = \
+                        transport.get("early_data_header_name", "Sec-WebSocket-Protocol")
             elif transport["type"] == "grpc":
                 proxy["grpc-opts"] = {"grpc-service-name": transport.get("service_name", "")}
             elif transport["type"] == "http":
@@ -1683,6 +1709,10 @@ def outbound_to_clash(node: dict, name: str) -> dict:
                 proxy["ws-opts"] = {"path": transport.get("path", "/")}
                 if transport.get("headers"):
                     proxy["ws-opts"]["headers"] = transport["headers"]
+                if transport.get("max_early_data"):
+                    proxy["ws-opts"]["max-early-data"] = int(transport["max_early_data"])
+                    proxy["ws-opts"]["early-data-header-name"] = \
+                        transport.get("early_data_header_name", "Sec-WebSocket-Protocol")
             elif transport["type"] == "grpc":
                 proxy["grpc-opts"] = {"grpc-service-name": transport.get("service_name", "")}
             elif transport["type"] == "http":
@@ -2108,7 +2138,17 @@ def classify_and_export(test_results: list):
     # ── 去重 (同出口IP+端口 只留最快) ──
     best_by_key = {}
     for n in safe_nodes:
-        key = f"{n['exit_ip']}:{n['port']}" if n["exit_ip"] else f"{n['server']}:{n['port']}|{n['raw'][:64]}"
+        # ★ 修复: exit_ip 为空时回退 key 掺 raw[:64] → 同节点不同名字未合并,
+        #   实测 51.79.85.185:8118 同凭据重复导出 3 条; 改为凭据指纹合并
+        if n["exit_ip"]:
+            key = f"{n['exit_ip']}:{n['port']}"
+        else:
+            # 无出口IP (IP_ECHO 全失败): 凭据指纹兜底 (server+port+proto+凭据)
+            ob = n.get("outbound") or {}
+            cred = ob.get("uuid") or ob.get("password") or ""
+            if isinstance(cred, list):
+                cred = str(cred)
+            key = f"{n['server'].lower()}:{n['port']}|{n['proto']}|{cred}"
         cur = best_by_key.get(key)
         if not cur or n["latency_ms"] < cur["latency_ms"]:
             best_by_key[key] = n
