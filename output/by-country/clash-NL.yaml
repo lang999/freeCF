@@ -5,60 +5,54 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇳🇱 荷兰 (Netherlands) 01 - xiaohe
-  server: 141.148.228.183
-  port: 45819
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Xm7yLe4+dffDq34pLm8fLqNoC8nrBgeic8qADGvw99U=
-- name: 🇳🇱 荷兰 (Netherlands) 02 - xiaohe
-  server: 141.148.238.94
-  port: 45819
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: 8/83+1pL9Iouc3XFDdBOP3M2tTOqyvGHdZuygHQax44=
-- name: 🇳🇱 荷兰 (Netherlands) 03 - xiaohe
-  server: 46.229.243.149
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-turbo-fr.roxa.org
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 04 - xiaohe
-  server: 72.56.116.57
-  port: 443
-  udp: true
-  type: hysteria2
-  password: wrSuBorIlf
-  sni: hys9.wba-pn.ru
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 05 - xiaohe
-  server: hys28.wba-pn.ru
-  port: 443
-  udp: true
-  type: hysteria2
-  password: BWAFlp8g53
-  sni: hys28.wba-pn.ru
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 06 - xiaohe
-  server: hys13.wba-pn.ru
+  server: 72.56.92.120
   port: 443
   udp: true
   type: hysteria2
   password: CnVfXXvMzh
   sni: hys13.wba-pn.ru
   skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 07 - xiaohe
-  server: hys34.wba-pn.ru
+- name: 🇳🇱 荷兰 (Netherlands) 02 - xiaohe
+  server: 46.229.243.144
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  sni: grape-turbo-fr.roxa.org
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 03 - xiaohe
+  server: 87.58.220.77
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 9c677d6f4e4608931926dc24caa4a60b
+  sni: web.max.ru
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 04 - xiaohe
+  server: 72.56.16.243
   port: 443
   udp: true
   type: hysteria2
   password: EkF2Yw0Lc7
-  sni: hys34.wba-pn.ru
+  sni: 72.56.16.243
   skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 08 - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 05 - xiaohe
+  server: 72.56.116.57
+  port: 443
+  udp: true
+  type: hysteria2
+  password: wrSuBorIlf
+  sni: 72.56.116.57
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 06 - xiaohe
+  server: 72.56.102.31
+  port: 443
+  udp: true
+  type: hysteria2
+  password: BWAFlp8g53
+  sni: hys28.wba-pn.ru
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 07 - xiaohe
   server: 5.129.235.85
   port: 443
   udp: true
@@ -66,7 +60,7 @@ proxies:
   password: gf1:gfhysteria2024
   sni: www.linux.com\u0026insecure=1\u0026allowinsecure=1
   skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 09 - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 08 - xiaohe
   server: 51.15.19.206
   port: 8443
   udp: true
@@ -76,13 +70,6 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: HysteriaHowdy
-- name: 🇳🇱 荷兰 (Netherlands) 10 - xiaohe
-  server: 92.5.201.63
-  port: 45819
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: BRt6sNhsE9LXtIG254qiJ2L3zBupc9Md4vuShjVabBY=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -96,8 +83,6 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 06 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 07 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 08 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 09 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -111,7 +96,5 @@ proxy-groups:
   - 🇳🇱 荷兰 (Netherlands) 06 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 07 - xiaohe
   - 🇳🇱 荷兰 (Netherlands) 08 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 09 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 10 - xiaohe
 rules:
 - MATCH,PROXIES

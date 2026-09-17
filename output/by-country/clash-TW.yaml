@@ -5,12 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
-  server: 160.187.100.109
+  server: vpn-tw-002.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 160.187.100.109
+  sni: t.me
   skip-cert-verify: true
 - name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   server: 103.115.109.49
@@ -18,7 +18,15 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
+  sni: t.me
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
+  server: 85.237.207.49
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: a56619e2bed91121eabb97d20be207c3
+  sni: 85-237-207-49.liao.kdns.fr
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -27,6 +35,7 @@ proxy-groups:
   - AUTO
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -34,5 +43,6 @@ proxy-groups:
   proxies:
   - 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
 rules:
 - MATCH,PROXIES

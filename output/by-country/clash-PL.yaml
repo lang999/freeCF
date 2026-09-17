@@ -13,21 +13,7 @@ proxies:
   sni: streambox.wwwinternetvideo.click
   skip-cert-verify: false
 - name: 🇵🇱 波兰 (Poland) 02 - xiaohe
-  server: 185.223.57.16
-  port: 33743
-  udp: true
-  type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
-  tls: true
-  reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  servername: www.google.com
-  client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
-- name: 🇵🇱 波兰 (Poland) 03 - xiaohe
-  server: admin.wwwinternetvideo.click
+  server: 45.192.12.93
   port: 443
   udp: true
   type: hysteria2
@@ -41,7 +27,6 @@ proxy-groups:
   - AUTO
   - 🇵🇱 波兰 (Poland) 01 - xiaohe
   - 🇵🇱 波兰 (Poland) 02 - xiaohe
-  - 🇵🇱 波兰 (Poland) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -49,6 +34,5 @@ proxy-groups:
   proxies:
   - 🇵🇱 波兰 (Poland) 01 - xiaohe
   - 🇵🇱 波兰 (Poland) 02 - xiaohe
-  - 🇵🇱 波兰 (Poland) 03 - xiaohe
 rules:
 - MATCH,PROXIES

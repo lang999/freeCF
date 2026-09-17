@@ -4,14 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇬🇷 希腊 (Greece) 01 - xiaohe",
-      "server": "185.126.238.87",
-      "server_port": 2083,
-      "uuid": "7668f678-faee-40cc-9b56-9c39dc773388",
-      "transport": {
-        "type": "grpc",
-        "service_name": "security.debian.org"
+      "type": "hysteria2",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 - xiaohe",
+      "server": "se-node.rumedia-cdn.com",
+      "server_port": 25443,
+      "password": "29ffde49-e1d6-4dcd-a135-352920f9f0b8",
+      "tls": {
+        "enabled": true,
+        "server_name": "cf2.rumedia-cdn.com",
+        "insecure": true
       }
     },
     {
@@ -19,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇷 希腊 (Greece) 01 - xiaohe"
+        "🇸🇪 瑞典 (Sweden) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇷 希腊 (Greece) 01 - xiaohe"
+        "🇸🇪 瑞典 (Sweden) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

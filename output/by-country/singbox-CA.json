@@ -4,36 +4,14 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇦 加拿大 (Canada) 01 - xiaohe",
-      "server": "104.19.32.166",
-      "server_port": 443,
-      "uuid": "efe19c5a-0ea1-4666-8a4c-4a33f4670775",
-      "tls": {
-        "enabled": true,
-        "server_name": "bodyshine.help",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/raccoonwsvless",
-        "headers": {
-          "Host": "bodyshine.help"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇨🇦 加拿大 (Canada) 02 - xiaohe",
+      "tag": "🇨🇦 加拿大 (Canada) 01 - xiaohe",
       "server": "15.223.122.197",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "15.223.122.197",
+        "server_name": "t.me",
         "insecure": true
       }
     },
@@ -42,16 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇦 加拿大 (Canada) 01 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 02 - xiaohe"
+        "🇨🇦 加拿大 (Canada) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇦 加拿大 (Canada) 01 - xiaohe",
-        "🇨🇦 加拿大 (Canada) 02 - xiaohe"
+        "🇨🇦 加拿大 (Canada) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -10,15 +10,15 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 3.36.93.74
+  sni: google.com
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
-  server: 152.67.200.82
-  port: 50160
+  server: vpn-kr-002.fastervpn.world
+  port: 443
   udp: true
   type: hysteria2
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: whatsapp.com
+  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
+  sni: vpn-kr-002.fastervpn.world
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
   server: 150-230-252-217.liao.kdns.fr
@@ -29,12 +29,12 @@ proxies:
   sni: 127.0.0.1
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
-  server: 132.226.226.189
+  server: 152.67.200.82
   port: 50160
   udp: true
   type: hysteria2
-  password: 1671a252e2a97dc2bda4e515475931da
-  sni: www.bing.com
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: whatsapp.com
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES

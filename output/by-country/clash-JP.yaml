@@ -5,6 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - xiaohe
+  server: 138.3.208.26
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 184cdec28da5a09450803c8debcd2cc9
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 02 - xiaohe
+  server: 45.76.218.34
+  port: 39509
+  udp: true
+  type: hysteria2
+  password: ecc1f6d7-d378-40f1-a424-cfca853f0b2e
+  sni: lazeno.vip
+  skip-cert-verify: false
+- name: 🇯🇵 日本 (Japan) 03 - xiaohe
+  server: 167.179.111.237
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /act/player/search?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇯🇵 日本 (Japan) 04 - xiaohe
   server: 104.156.238.23
   port: 443
   udp: true
@@ -20,70 +52,6 @@ proxies:
       Host: cdn8848.776676.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇯🇵 日本 (Japan) 02 - xiaohe
-  server: 203.137.165.164
-  port: 57554
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /p/docs/soft?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇯🇵 日本 (Japan) 03 - xiaohe
-  server: 138.3.208.26
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 184cdec28da5a09450803c8debcd2cc9
-  sni: 138.3.208.26
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 04 - xiaohe
-  server: jp1.xiaoliyu.us
-  port: 27102
-  udp: true
-  type: hysteria2
-  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
-  sni: jp1.xiaoliyu.us
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 05 - xiaohe
-  server: 45.142.166.211
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /knowledge?ed=2560fp=chrome
-    headers:
-      Host: cdn8848.776676.xyz
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇯🇵 日本 (Japan) 06 - xiaohe
-  server: 104.21.33.59
-  port: 443
-  udp: true
-  type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-  tls: true
-  servername: jp3.yohototo.top
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /tyxyws
-    headers:
-      Host: jp3.yohototo.top
 proxy-groups:
 - name: PROXIES
   type: select
@@ -93,8 +61,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 02 - xiaohe
   - 🇯🇵 日本 (Japan) 03 - xiaohe
   - 🇯🇵 日本 (Japan) 04 - xiaohe
-  - 🇯🇵 日本 (Japan) 05 - xiaohe
-  - 🇯🇵 日本 (Japan) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -104,7 +70,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 02 - xiaohe
   - 🇯🇵 日本 (Japan) 03 - xiaohe
   - 🇯🇵 日本 (Japan) 04 - xiaohe
-  - 🇯🇵 日本 (Japan) 05 - xiaohe
-  - 🇯🇵 日本 (Japan) 06 - xiaohe
 rules:
 - MATCH,PROXIES
