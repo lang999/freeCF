@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
+  server: r3mrcg00129437x.cybervena.com
+  port: 50099
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
+- name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
+  server: 103.115.109.49
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   server: 85.237.207.49
   port: 50160
   udp: true
@@ -12,7 +27,7 @@ proxies:
   password: a56619e2bed91121eabb97d20be207c3
   sni: 85-237-207-49.liao.kdns.fr
   skip-cert-verify: false
-- name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
+- name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
   server: 35.201.230.136
   port: 443
   udp: true
@@ -24,59 +39,38 @@ proxies:
     public-key: Uq9Q8VXK9VkVOJ1M5PfORTqMhjjGoIS40-V0tAG_1FM
     short-id: 5e13a6d43d0644c9
   servername: www.cloudflare.com
-  client-fingerprint: safari
-- name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
-  server: 165.154.195.38
-  port: 35034
+  client-fingerprint: edge
+- name: 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
+  server: r3mrcg001286ek2.cybervena.com
+  port: 50099
   udp: true
-  type: vmess
-  uuid: 959a8caf-4cea-43d0-a548-3628e7ddfafc
-  alterId: 0
-  cipher: auto
-- name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4
+- name: 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
+  server: 60.248.219.78
+  port: 443
+  udp: true
+  type: vless
+  uuid: c1c04450-bf71-4049-ad0c-9cf6d94d9f1f
+  tls: true
+  servername: ty986gfazs.cainiaohub.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
+    headers:
+      Host: ty986gfazs.cainiaohub.xyz
+- name: 🇹🇼 中国台湾 (Taiwan) 07 - xiaohe
   server: vpn-tw-002.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-tw-002.fastervpn.world\u0026insecure=1\u0026allowinsecure=1
+  sni: css.rbxcdn.com
   skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
-  server: 103.115.109.49
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2🇨🇳
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
-  server: 34.81.129.171
-  port: 34376
-  udp: true
-  type: vless
-  uuid: bf8cc771-51a0-4395-810f-1f135325cfc1
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Atq4Fo_Mg48QtKXagBW9jnhaQSDUCiKgnATB2EU6OHU
-    short-id: 8dbafb690450d8a9
-  servername: www.sony.com
-  client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 07 - xiaohe
-  server: 104.199.219.172
-  port: 40800
-  udp: true
-  type: vless
-  uuid: 5859f6a7-cda1-47c2-8353-fcdee281f31d
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zohUbvPLKVBwzuDmZNsaXXFYZSKA9_xEhdUyURChrgo
-    short-id: 186e4c2732d61a3d
-  servername: www.intel.com
-  client-fingerprint: random
 - name: 🇹🇼 中国台湾 (Taiwan) 08 - xiaohe
-  server: hinet1.2yly.com
+  server: 118.167.212.163
   port: 24215
   udp: true
   type: vless
@@ -85,7 +79,7 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
