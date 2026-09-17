@@ -53,13 +53,16 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
-    "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/karing节点.txt",
-    "https://www.ermao.net/sub/clash/ermao.net",
-    "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/verified.yaml",
-    "https://hvwin8.github.io/autojiedian/clash.yaml",
-    "https://raw.githubusercontent.com/suiyuan8/clash/refs/heads/main/config2",
-    "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_zijian_auto?token=xgy1nCsG7xgerdecv4QRn",
+    "https://wild-cloud-9893.heleimail.workers.dev",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
+    "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/karing节点.txt",
+    "https://hvwin8.github.io/autojiedian/clash.yaml",
+    "https://raw.githubusercontent.com/suiyuan8/clash/refs/heads/main/config2",
+    "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_zijian_auto?token=xgy1nCsG7xgerdecv4QRn",
+    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
+    "https://raw.githubusercontent.com/freefq/free/master/v2",
+    "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/verified.yaml",
+    "https://www.ermao.net/sub/v2ray/ermao.net",
 ]
 
 OUTPUT_DIR = "output"
