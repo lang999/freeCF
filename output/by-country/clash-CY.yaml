@@ -18,20 +18,18 @@ proxies:
   grpc-opts:
     grpc-service-name: ''
 - name: 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
-  server: carina.yokkastars.com
-  port: 2443
+  server: 5.253.42.164
+  port: 40443
   udp: true
   type: vless
-  uuid: 826f4c26-5e01-472d-a1f1-1bd8e2cb25fb
+  uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 3cW_F0us0je_lhnl5xpwSxHyRfTQaKFELxWLr8jRzic
-    short-id: e496c7fe1cefc9ff
+    public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw
+    short-id: 68a8
   servername: deepl.com
-  client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: rex-grpc
+  client-fingerprint: chrome
 - name: 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
   server: 5.253.42.163
   port: 40443
@@ -45,19 +43,6 @@ proxies:
     short-id: 84fc
   servername: deepl.com
   client-fingerprint: chrome
-- name: 🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe
-  server: 2.56.121.43
-  port: 443
-  udp: true
-  type: vless
-  uuid: eec2f6a7-c10f-43b0-b133-61f9bf9bbc27
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: vnUSQFujh6K08KR6FHYWoBkZCAEZNWSKji0PPw9eMWM
-    short-id: 86229a5e3b1e6ef4
-  servername: www.ikea.com
-  client-fingerprint: ''
 proxy-groups:
 - name: PROXIES
   type: select
@@ -66,7 +51,6 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -75,6 +59,5 @@ proxy-groups:
   - 🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe
   - 🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe
   - 🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe
-  - 🇨🇾 塞浦路斯 (Cyprus) 04 - xiaohe
 rules:
 - MATCH,PROXIES
