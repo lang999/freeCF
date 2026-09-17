@@ -4,82 +4,25 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 108.162.198.178
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 108.162.198.178
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 104.18.26.90
+- name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
+  server: 7dba81fc3a0b.oylfmxz.cn
   port: 443
   udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
+  type: vmess
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: xi.tbv.ccwu.cc
+  servername: 7dba81fc3a0b.oylfmxz.cn
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 172.64.154.8
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 05 - xiaohe
-  server: 104.18.46.46
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 104.18.46.46
-  port: 8880
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
     path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 162.159.39.218
-  port: 8880
+      Host: 7dba81fc3a0b.oylfmxz.cn
+- name: 🇺🇸 美国 (United States) 02 - xiaohe
+  server: 104.18.46.46
+  port: 8080
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -90,8 +33,8 @@ proxies:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: 172.64.53.55
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 172.64.32.103
   port: 80
   udp: true
   type: vless
@@ -103,8 +46,21 @@ proxies:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 188.114.97.6
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 172.64.229.2
+  port: 2052
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇸🇨 塞舌尔 (Seychelles) 05 - xiaohe
+  server: 172.64.42.85
   port: 2086
   udp: true
   type: vless
@@ -113,8 +69,29 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 162.159.48.32
+  port: 2082
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 155.248.209.237
+  port: 33333
+  udp: true
+  type: hysteria2
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: 155.248.209.237
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
   server: 104.18.34.14
   port: 2095
   udp: true
@@ -122,47 +99,88 @@ proxies:
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /
+    path: /?ed=2560
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 11 - xiaohe
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 104.18.47.113
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
+  server: 108.162.198.178
+  port: 8880
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🌐 其他地区 (Other) 11 - xiaohe
+  server: 172.64.52.6
+  port: 2095
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 12 - xiaohe
   server: 163.192.14.135
   port: 50160
   udp: true
   type: hysteria2
   password: 099830134df5ac3a04a4b21d39b8c395
-  sni: www.bing.com
+  sni: css.rbxcdn.com
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 12 - xiaohe
-  server: 31.43.179.36
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
 - name: 🇺🇸 美国 (United States) 13 - xiaohe
-  server: 139.64.235.115
-  port: 443
+  server: 104.18.46.234
+  port: 8080
   udp: true
   type: vless
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
-  tls: true
-  servername: nb.lovecf.ggff.net
-  skip-cert-verify: false
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /?ed=2560
     headers:
-      Host: nb.lovecf.ggff.net
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 14 - xiaohe
-  server: 139.64.235.117
+  server: 104.16.111.193
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
+  tls: true
+  servername: vip.868068.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: vip.868068.xyz
+- name: 🇺🇸 美国 (United States) 15 - xiaohe
+  server: 104.16.10.2
   port: 443
   udp: true
   type: vless
@@ -170,27 +188,26 @@ proxies:
   tls: true
   servername: nb.lovecf.ggff.net
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: 🇨🇦 加拿大 (Canada) 15 - xiaohe
-  server: 15.223.122.197
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  skip-cert-verify: true
 - name: 🇺🇸 美国 (United States) 16 - xiaohe
-  server: vpn-us-003.fastervpn.world
+  server: 162.159.192.125
   port: 443
   udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-us-003.fastervpn.world
-  skip-cert-verify: true
+  type: vless
+  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
+  tls: true
+  servername: vip.868068.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: vip.868068.xyz
 - name: 🇺🇸 美国 (United States) 17 - xiaohe
   server: 139.64.235.225
   port: 443
@@ -206,31 +223,35 @@ proxies:
     headers:
       Host: nb.lovecf.ggff.net
 - name: 🇺🇸 美国 (United States) 18 - xiaohe
-  server: hy2.561891.xyz
-  port: 44356
+  server: 104.16.111.193
+  port: 443
   udp: true
-  type: hysteria2
-  password: dongtaiwang.com
-  sni: hy2.561891.xyz
+  type: vless
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  tls: true
+  servername: xi.tbv.ccwu.cc
   skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
 - name: 🇺🇸 美国 (United States) 19 - xiaohe
-  server: 66.94.121.46
+  server: 104.18.26.90
   port: 443
   udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: www.broadcom.com
-  skip-cert-verify: true
+  type: vless
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  tls: true
+  servername: xi.tbv.ccwu.cc
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
 - name: 🇺🇸 美国 (United States) 20 - xiaohe
-  server: vpn-us-006.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-us-006.fastervpn.world
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 21 - xiaohe
-  server: 104.21.34.106
+  server: 91.209.253.229
   port: 443
   udp: true
   type: vless
@@ -243,200 +264,169 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: 🇬🇧 英国 (United Kingdom) 22 - xiaohe
-  server: 144.24.225.111
-  port: 61312
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: xtHPuZw32Ek7q4odOVXoMn+UY9C/IdokDkolQjvdxrk=
-- name: 🇺🇸 美国 (United States) 23 - xiaohe
-  server: hy2.123266.xyz
-  port: 33333
+- name: 🇺🇸 美国 (United States) 21 - xiaohe
+  server: 142.249.37.90
+  port: 44356
   udp: true
   type: hysteria2
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
+  password: dongtaiwang.com
+  sni: hy2.561891.xyz
   skip-cert-verify: true
-- name: 🇬🇧 英国 (United Kingdom) 24 - xiaohe
-  server: 13.40.130.216
-  port: 443
+- name: 🇺🇸 美国 (United States) 22 - xiaohe
+  server: 172.64.229.2
+  port: 80
   udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-uk-002.fastervpn.world
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 25 - xiaohe
-  server: 72.56.92.120
-  port: 443
-  udp: true
-  type: hysteria2
-  password: CnVfXXvMzh
-  sni: hys13.wba-pn.ru
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
-  server: 46.229.243.144
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
-  sni: grape-turbo-fr.roxa.org
-  skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 27 - xiaohe
-  server: 87.58.220.77
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 9c677d6f4e4608931926dc24caa4a60b
-  sni: web.max.ru
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 28 - xiaohe
-  server: 72.56.16.243
-  port: 443
-  udp: true
-  type: hysteria2
-  password: EkF2Yw0Lc7
-  sni: 72.56.16.243
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 29 - xiaohe
-  server: 72.56.116.57
-  port: 443
-  udp: true
-  type: hysteria2
-  password: wrSuBorIlf
-  sni: 72.56.116.57
-  skip-cert-verify: true
-- name: 🇦🇪 阿联酋 (UAE) 30 - xiaohe
-  server: 130.49.161.70
-  port: 443
-  udp: true
-  type: hysteria2
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  sni: hy2.aspidnet.xyz
-  skip-cert-verify: false
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇫🇷 法国 (France) 31 - xiaohe
-  server: vpn-fr-002.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇬🇧 英国 (United Kingdom) 32 - xiaohe
-  server: vpn-uk-002.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 33 - xiaohe
-  server: 138.3.208.26
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 184cdec28da5a09450803c8debcd2cc9
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 34 - xiaohe
-  server: 162.249.126.6
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
-  sni: hopp-germany-new.ddnsguru.com
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 35 - xiaohe
-  server: us2.xiaoliyu.cyou
-  port: 4433
-  udp: true
-  type: hysteria2
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: us2.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 36 - xiaohe
-  server: www.shopify.com
-  port: 443
-  udp: true
-  type: vmess
-  uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: guanwang.awsno.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /hls/cctv5phd.m3u8
+    path: /?ed=2560
     headers:
-      Host: guanwang.awsno.com
-- name: 🇵🇱 波兰 (Poland) 37 - xiaohe
-  server: 217.60.33.215
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 23 - xiaohe
+  server: 139.64.235.77
   port: 443
   udp: true
-  type: hysteria2
-  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
-  sni: streambox.wwwinternetvideo.click
+  type: vless
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  tls: true
+  servername: nb.lovecf.ggff.net
   skip-cert-verify: false
-- name: 🇳🇱 荷兰 (Netherlands) 38 - xiaohe
-  server: 72.56.102.31
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: 🇺🇸 美国 (United States) 24 - xiaohe
+  server: vpn-us-006.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
-  password: BWAFlp8g53
-  sni: hys28.wba-pn.ru
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-us-006.fastervpn.world
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 39 - xiaohe
+- name: 🇺🇸 美国 (United States) 25 - xiaohe
+  server: 172.64.229.170
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 26 - xiaohe
+  server: 172.64.229.170
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 27 - xiaohe
+  server: 3.148.253.102
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇺🇸 美国 (United States) 28 - xiaohe
+  server: 172.64.229.2
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 29 - xiaohe
+  server: starlink-ft.251313.xyz
+  port: 443
+  udp: true
+  type: hysteria2
+  password: https://xship.top
+  sni: xship.top
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 30 - xiaohe
+  server: vpn-us-003.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-us-003.fastervpn.world
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 31 - xiaohe
   server: 45.76.218.34
   port: 39509
   udp: true
   type: hysteria2
   password: ecc1f6d7-d378-40f1-a424-cfca853f0b2e
   sni: lazeno.vip
-  skip-cert-verify: false
-- name: 🇬🇧 英国 (United Kingdom) 40 - xiaohe
-  server: labs.frkn.org
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 3b8c82ed-fe66-472d-915e-034ccb57103f
-  sni: labs.frkn.org
   skip-cert-verify: true
-- name: 🇵🇱 波兰 (Poland) 41 - xiaohe
-  server: 45.192.12.93
-  port: 443
+- name: 🇺🇸 美国 (United States) 32 - xiaohe
+  server: 104.18.42.54
+  port: 2096
   udp: true
-  type: hysteria2
-  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
-  sni: admin.wwwinternetvideo.click
+  type: vless
+  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
+  tls: true
+  servername: vip.868068.xyz
   skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 42 - xiaohe
-  server: 104.165.205.42
-  port: 8443
+  client-fingerprint: random
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: vip.868068.xyz
+- name: 🇬🇧 英国 (United Kingdom) 33 - xiaohe
+  server: 129.151.75.102
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: my66u+JIEnQPAHXgaWDetuCsLnXPfyJPGAfDVMfKUtY=
+- name: 🇬🇧 英国 (United Kingdom) 34 - xiaohe
+  server: 144.24.225.111
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: xtHPuZw32Ek7q4odOVXoMn+UY9C/IdokDkolQjvdxrk=
+- name: 🇺🇸 美国 (United States) 35 - xiaohe
+  server: us4.xiaoliyu.cyou
+  port: 4433
   udp: true
   type: hysteria2
-  password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
-  sni: speedtestmark.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 43 - xiaohe
-  server: 130.61.50.75
-  port: 6443
-  udp: true
-  type: hysteria2
-  password: zhangyang
-  sni: https%25253a%25252f%25252fwww.calmloud.com
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: css.rbxcdn.com
   skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 44 - xiaohe
-  server: 85.204.107.172
-  port: 8443
+- name: 🇺🇸 美国 (United States) 36 - xiaohe
+  server: www.epicgames.com
+  port: 2095
   udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 45 - xiaohe
+  type: vless
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: free-claude-api.asshole.us.ci
+- name: 🇯🇵 日本 (Japan) 37 - xiaohe
   server: 167.179.111.237
   port: 443
   udp: true
@@ -445,22 +435,39 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /act/player/search?ed=2560fp=chrome
+    path: /act/player/search?ed=2560
     headers:
       Host: cdn8848.776676.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇨🇭 瑞士 (Switzerland) 46 - xiaohe
-  server: 104.165.205.40
-  port: 8443
+- name: 🇯🇵 日本 (Japan) 38 - xiaohe
+  server: 108.160.136.71
+  port: 443
   udp: true
-  type: hysteria2
-  password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
-  sni: speedtestmark.com
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
   skip-cert-verify: false
-- name: 🇯🇵 日本 (Japan) 47 - xiaohe
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /doc/products/view?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇭🇰 中国香港 (Hong Kong) 39 - xiaohe
+  server: 181.215.18.196
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: manm1wouaeic9db3
+- name: 🇯🇵 日本 (Japan) 40 - xiaohe
   server: 104.156.238.23
   port: 443
   udp: true
@@ -476,64 +483,185 @@ proxies:
       Host: cdn8848.776676.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇷🇴 罗马尼亚 (Romania) 48 - xiaohe
-  server: 185.156.44.99
-  port: 443
+- name: 🇯🇵 日本 (Japan) 41 - xiaohe
+  server: 203.137.165.164
+  port: 57554
   udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: whatsapp.com
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 49 - xiaohe
-  server: vpn-tw-002.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 50 - xiaohe
-  server: es1.xiaoliyu.cyou
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /p/docs/soft?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 42 - xiaohe
+  server: us2.xiaoliyu.cyou
   port: 4433
   udp: true
   type: hysteria2
   password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: es1.xiaoliyu.cyou
+  sni: us2.xiaoliyu.cyou
   skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 51 - xiaohe
-  server: de-node.rumedia-cdn.com
-  port: 25443
+- name: 🇺🇸 美国 (United States) 43 - xiaohe
+  server: 162.159.39.218
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇹🇼 中国台湾 (Taiwan) 44 - xiaohe
+  server: 160.187.100.109
+  port: 443
   udp: true
   type: hysteria2
-  password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
-  sni: cf6.rumedia-cdn.com
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 160.187.100.109
   skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 52 - xiaohe
-  server: 62.210.147.2
-  port: 43115
+- name: 🇬🇧 英国 (United Kingdom) 45 - xiaohe
+  server: 13.40.130.216
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-uk-002.fastervpn.world
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 46 - xiaohe
+  server: 162.159.254.3
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
+- name: 🇯🇵 日本 (Japan) 47 - xiaohe
+  server: 1-jp.ap.ku-ke.cc
+  port: 443
+  udp: true
+  type: vless
+  uuid: d03c34c3-98fa-42ff-80a8-6ea1d0b24ac9
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: ImUbTZ1OKgAaiNlCf8zkeO5NnbAdKHdm2fhphvEZNxY
+    short-id: '56'
+  servername: cdn.jsdelivr.net
+  client-fingerprint: chrome
+- name: 🇯🇵 日本 (Japan) 48 - xiaohe
+  server: 138.3.208.26
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 184cdec28da5a09450803c8debcd2cc9
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇬🇧 英国 (United Kingdom) 49 - xiaohe
+  server: vpn-uk-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 50 - xiaohe
+  server: 72.56.16.243
+  port: 443
+  udp: true
+  type: hysteria2
+  password: EkF2Yw0Lc7
+  sni: 72.56.16.243
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 51 - xiaohe
+  server: 150.251.143.8
+  port: 443
+  udp: true
+  type: vless
+  uuid: 129799e0-a9b1-4ae8-80bd-fa92db813f85
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MxrzWQPAwfj7jC0b4_6jlpUlXowcJFh7lOhZSIe0ezE
+  servername: nobnob.shhflow.xyz
+  client-fingerprint: ios
+- name: 🇭🇰 中国香港 (Hong Kong) 52 - xiaohe
+  server: 176.32.35.44
+  port: 50111
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: 6b39ae3234dfd68b
+- name: 🇫🇷 法国 (France) 53 - xiaohe
+  server: 62.210.7.139
+  port: 60111
   udp: true
   type: hysteria2
   password: github.com/Alvin9999-newpac/fanqiang
-  sni: www.microsoft.com
+  sni: speedtest.tinkoff.ru
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 53 - xiaohe
-  server: 3.36.93.74
+- name: 🇳🇱 荷兰 (Netherlands) 54 - xiaohe
+  server: 72.56.116.57
   port: 443
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: google.com
+  password: wrSuBorIlf
+  sni: 72.56.116.57
   skip-cert-verify: true
-- name: 🇩🇰 丹麦 (Denmark) 54 - xiaohe
-  server: se.xiaoliyu.cyou
-  port: 4433
+- name: 🇰🇷 韩国 (South Korea) 55 - xiaohe
+  server: hg.zhujue.us
+  port: 11000
+  udp: true
+  type: vless
+  uuid: 0e46345c-f33b-4f9b-b8ec-90e7c986af7e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sFRyah8EOSGcab8TfIdkq53c5HBSwAVfYQCyvZ0_BG4
+  servername: s0.awsstatic.com
+  client-fingerprint: chrome
+- name: 🇳🇱 荷兰 (Netherlands) 56 - xiaohe
+  server: 72.56.92.120
+  port: 443
   udp: true
   type: hysteria2
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: se.xiaoliyu.cyou
+  password: CnVfXXvMzh
+  sni: hys13.wba-pn.ru
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 57 - xiaohe
+  server: 132.226.226.189
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 1671a252e2a97dc2bda4e515475931da
+  sni: www.bing.com
   skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 55 - xiaohe
-  server: hy2.aspidnet.xyz
+- name: 🇫🇷 法国 (France) 58 - xiaohe
+  server: 62.210.124.146
+  port: 22000
+  udp: true
+  type: hysteria2
+  password: dongtaiwang.com
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: 🇦🇪 阿联酋 (UAE) 59 - xiaohe
+  server: 130.49.161.70
   port: 443
   udp: true
   type: hysteria2
@@ -542,25 +670,136 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇭🇰 中国香港 (Hong Kong) 56 - xiaohe
+- name: 🇳🇱 荷兰 (Netherlands) 60 - xiaohe
+  server: 50.7.120.162
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: nl-dedic-mori.failspace.top
+  skip-cert-verify: false
+  client-fingerprint: firefox
+- name: 🇳🇱 荷兰 (Netherlands) 61 - xiaohe
+  server: 5.129.235.85
+  port: 443
+  udp: true
+  type: hysteria2
+  password: gf1:gfhysteria2024
+  sni: t.me
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 62 - xiaohe
+  server: 152.70.237.123
+  port: 2053
+  udp: true
+  type: hysteria2
+  password: maintell
+  sni: bing.com
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 63 - xiaohe
+  server: 62.210.147.2
+  port: 43115
+  udp: true
+  type: hysteria2
+  password: github.com/Alvin9999-newpac/fanqiang
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: 🇭🇰 中国香港 (Hong Kong) 64 - xiaohe
+  server: 202.146.222.174
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: https://t.me/wangcai2🇨🇳
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 65 - xiaohe
+  server: vpn-fr-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-fr-002.fastervpn.world
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 (South Korea) 66 - xiaohe
+  server: 152.67.200.82
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
+  sni: 152.67.200.82
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 67 - xiaohe
+  server: 130.61.50.75
+  port: 6443
+  udp: true
+  type: hysteria2
+  password: zhangyang
+  sni: https%2525253a%2525252f%2525252fwww.calmloud.com
+  skip-cert-verify: true
+- name: 🇳🇱 荷兰 (Netherlands) 68 - xiaohe
+  server: 46.229.243.149
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  sni: grape-turbo-fr.roxa.org
+  skip-cert-verify: false
+- name: 🇵🇱 波兰 (Poland) 69 - xiaohe
+  server: 185.223.57.16
+  port: 33743
+  udp: true
+  type: vless
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  tls: true
+  reality-opts:
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  servername: www.google.com
+  client-fingerprint: chrome
+  network: grpc
+  grpc-opts:
+    grpc-service-name: TunService
+- name: 🇳🇱 荷兰 (Netherlands) 70 - xiaohe
+  server: 72.56.102.31
+  port: 443
+  udp: true
+  type: hysteria2
+  password: BWAFlp8g53
+  sni: 72.56.102.31
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 71 - xiaohe
+  server: 45.192.12.93
+  port: 443
+  udp: true
+  type: hysteria2
+  password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
+  sni: admin.wwwinternetvideo.click
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 72 - xiaohe
   server: 202.146.222.89
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 'off'
+  sni: 202.146.222.89
   skip-cert-verify: true
-- name: 🇹🇷 土耳其 (Turkey) 57 - xiaohe
-  server: me17.msjia8844.site
-  port: 7443
+- name: 🇸🇬 新加坡 (Singapore) 73 - xiaohe
+  server: 13.212.32.171
+  port: 443
   udp: true
   type: hysteria2
-  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
-  sni: me17.msjia8844.site
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  sni: vpn-sg-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇵🇱 波兰 (Poland) 74 - xiaohe
+  server: 217.60.33.215
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01
+  sni: streambox.wwwinternetvideo.click
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
-- name: 🇪🇪 爱沙尼亚 (Estonia) 58 - xiaohe
+- name: 🇪🇪 爱沙尼亚 (Estonia) 75 - xiaohe
   server: ee1.sferavpn.pro
   port: 443
   udp: true
@@ -570,65 +809,83 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-- name: 🇰🇷 韩国 (South Korea) 59 - xiaohe
-  server: vpn-kr-002.fastervpn.world
+- name: 🇩🇪 德国 (Germany) 76 - xiaohe
+  server: 144.31.168.59
   port: 443
   udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ9wR5tF6vB3z
-  sni: vpn-kr-002.fastervpn.world
-  skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 60 - xiaohe
-  server: 103.115.109.49
-  port: 443
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: aotocon.ggisopi.su
+  client-fingerprint: firefox
+- name: 🇬🇷 希腊 (Greece) 77 - xiaohe
+  server: 185.126.238.87
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+  network: grpc
+  grpc-opts:
+    grpc-service-name: security.debian.org
+- name: 🇷🇴 罗马尼亚 (Romania) 78 - xiaohe
+  server: 162.249.126.7
+  port: 8443
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: t.me
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 61 - xiaohe
-  server: de.1.23.h2corp.org
-  port: 443
-  udp: true
-  type: hysteria2
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  sni: germany3.h2corp.local
-  skip-cert-verify: true
-- name: 🇫🇷 法国 (France) 62 - xiaohe
-  server: 62.210.7.139
-  port: 60111
-  udp: true
-  type: hysteria2
-  password: github.com/Alvin9999-newpac/fanqiang
-  sni: css.rbxcdn.com
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 63 - xiaohe
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  sni: hopp-germany-new.ddnsguru.com
+  skip-cert-verify: false
+- name: 🇭🇰 中国香港 (Hong Kong) 79 - xiaohe
   server: 202.146.222.29
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https://t.me/wangcai2üá®üá≥
+  sni: "https://t.me/wangcai2ð\x9F\x87¨ð\x9F\x87³"
   skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 64 - xiaohe
-  server: 162.249.125.133
-  port: 443
+- name: 🇩🇪 德国 (Germany) 80 - xiaohe
+  server: de-node.rumedia-cdn.com
+  port: 25443
   udp: true
   type: hysteria2
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  sni: hy2-new.aspidnet.xyz
+  password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
+  sni: cf6.rumedia-cdn.com
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-- name: 🇮🇳 印度 (India) 65 - xiaohe
-  server: 13.207.151.141
+- name: 🇸🇬 新加坡 (Singapore) 81 - xiaohe
+  server: 109.66.88.158
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /details
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇹🇼 中国台湾 (Taiwan) 82 - xiaohe
+  server: 103.115.109.49
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-in-001.fastervpn.world
+  sni: https
   skip-cert-verify: true
-- name: 🇸🇪 瑞典 (Sweden) 66 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 83 - xiaohe
+  server: 91.240.86.70
+  port: 22443
+  udp: true
+  type: hysteria2
+  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
+  sni: hy.quattro-tech.ru
+  skip-cert-verify: true
+- name: 🇸🇪 瑞典 (Sweden) 84 - xiaohe
   server: se-node.rumedia-cdn.com
   port: 25443
   udp: true
@@ -636,31 +893,7 @@ proxies:
   password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
   sni: cf2.rumedia-cdn.com
   skip-cert-verify: true
-- name: 🇰🇷 韩国 (South Korea) 67 - xiaohe
-  server: 150-230-252-217.liao.kdns.fr
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 9cfc9458e48c028ec03ff86ebc71c744
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇭🇰 中国香港 (Hong Kong) 68 - xiaohe
-  server: 202.146.222.174
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2fwangcai2
-  skip-cert-verify: true
-- name: 🇦🇪 阿联酋 (UAE) 69 - xiaohe
-  server: 85.204.107.176
-  port: 8080
-  udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: false
-- name: 🇭🇰 中国香港 (Hong Kong) 70 - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 85 - xiaohe
   server: mz.hkychina.com
   port: 8443
   udp: true
@@ -668,8 +901,236 @@ proxies:
   password: HysTeria2026!Proxy
   sni: mz.hkychina.com
   skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 71 - xiaohe
-  server: nl1.sferavpn.pro
+- name: 🇨🇭 瑞士 (Switzerland) 86 - xiaohe
+  server: 104.165.205.40
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
+  sni: speedtestmark.com
+  skip-cert-verify: false
+- name: 🇸🇬 新加坡 (Singapore) 87 - xiaohe
+  server: 23.249.18.144
+  port: 8581
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /channels/act?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇸🇬 新加坡 (Singapore) 88 - xiaohe
+  server: 159.65.8.14
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /magnet?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇪🇪 爱沙尼亚 (Estonia) 89 - xiaohe
+  server: est1313.ggisopi.su
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: est1313.ggisopi.su
+  client-fingerprint: edge
+- name: 🇺🇸 美国 (United States) 90 - xiaohe
+  server: polacondr.ggisopi.su
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: polacondr.ggisopi.su
+  client-fingerprint: edge
+- name: 🇸🇬 新加坡 (Singapore) 91 - xiaohe
+  server: 43.175.131.30
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /category/lives?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇨🇭 瑞士 (Switzerland) 92 - xiaohe
+  server: 104.165.205.42
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 54d2f622-fd71-4f5f-8813-832b68f4ca3b
+  sni: speedtestmark.com
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 93 - xiaohe
+  server: 85.204.107.177
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: hopp-romania-new.roxa.org
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 94 - xiaohe
+  server: 185.156.44.99
+  port: 443
+  udp: true
+  type: hysteria2
+  password: gf1:gfhysteria2024
+  sni: whatsapp.com
+  skip-cert-verify: true
+- name: 🇮🇳 印度 (India) 95 - xiaohe
+  server: 13.207.151.141
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-in-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇮🇳 印度 (India) 96 - xiaohe
+  server: 35.154.58.87
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-in-001.fastervpn.world
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 97 - xiaohe
+  server: jp1.xiaoliyu.us
+  port: 27102
+  udp: true
+  type: hysteria2
+  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
+  sni: jp1.xiaoliyu.us
+  skip-cert-verify: false
+- name: 🇰🇷 韩国 (South Korea) 98 - xiaohe
+  server: 150-230-252-217.liao.kdns.fr
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇯🇵 日本 (Japan) 99 - xiaohe
+  server: 45.142.166.211
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /knowledge?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 100 - xiaohe
+  server: de.1.23.h2corp.org
+  port: 443
+  udp: true
+  type: hysteria2
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: germany3.h2corp.local
+  skip-cert-verify: true
+- name: 🇦🇪 阿联酋 (UAE) 101 - xiaohe
+  server: 85.204.107.183
+  port: 8080
+  udp: true
+  type: hysteria2
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: hopp-romania-new.roxa.org
+  skip-cert-verify: false
+- name: 🇩🇰 丹麦 (Denmark) 102 - xiaohe
+  server: se.xiaoliyu.cyou
+  port: 4433
+  udp: true
+  type: hysteria2
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: se.xiaoliyu.cyou
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 103 - xiaohe
+  server: 121.46.230.139
+  port: 65443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+- name: 🇺🇸 美国 (United States) 104 - xiaohe
+  server: es1.xiaoliyu.cyou
+  port: 4433
+  udp: true
+  type: hysteria2
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: es1.xiaoliyu.cyou
+  skip-cert-verify: true
+- name: 🇷🇺 俄罗斯 (Russia) 105 - xiaohe
+  server: msk.frkn.org
+  port: 443
+  udp: true
+  type: hysteria2
+  password: f317b5d6-d399-4d3d-a051-89d674ae953c
+  sni: msk.frkn.org
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 106 - xiaohe
+  server: hy2.aspidnet.xyz
+  port: 443
+  udp: true
+  type: hysteria2
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  sni: hy2.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+- name: 🇺🇸 美国 (United States) 107 - xiaohe
+  server: us2.xiaoliyu.us
+  port: 2077
+  udp: true
+  type: hysteria2
+  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
+  sni: us2.xiaoliyu.us
+  skip-cert-verify: false
+- name: 🇳🇱 荷兰 (Netherlands) 108 - xiaohe
+  server: nl01ntrhy01.tcp-reset-club.net
+  port: 443
+  udp: true
+  type: hysteria2
+  password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
+  sni: nl01ntrhy01.tcp-reset-club.net
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 109 - xiaohe
+  server: 2.27.249.79
   port: 443
   udp: true
   type: hysteria2
@@ -678,69 +1139,15 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-- name: 🇹🇭 泰国 (Thailand) 72 - xiaohe
-  server: 104.18.26.90
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3c52e091-6714-4915-949f-2149fe69951b
-  tls: true
-  servername: v2ray.simspeedup.com
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: v2ray.simspeedup.com
-- name: 🇰🇷 韩国 (South Korea) 73 - xiaohe
-  server: 152.67.200.82
+- name: 🇸🇬 新加坡 (Singapore) 110 - xiaohe
+  server: 138.2.73.238
   port: 50160
   udp: true
   type: hysteria2
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: whatsapp.com
+  password: f87376e17da040ed04c9665ce8972930
+  sni: 138.2.73.238
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 74 - xiaohe
-  server: jp1.xiaoliyu.us
-  port: 27102
-  udp: true
-  type: hysteria2
-  password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
-  sni: jp1.xiaoliyu.us
-  skip-cert-verify: false
-- name: 🇮🇳 印度 (India) 75 - xiaohe
-  server: vpn-in-001.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 76 - xiaohe
-  server: ru.xiaoliyu.cyou
-  port: 4433
-  udp: true
-  type: hysteria2
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: ru.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: 🇨🇭 瑞士 (Switzerland) 77 - xiaohe
-  server: 140.238.213.114
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 84a506ca5aca505696a454d828420b3f
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 78 - xiaohe
-  server: 91.240.86.70
-  port: 22443
-  udp: true
-  type: hysteria2
-  password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
-  sni: hy.quattro-tech.ru
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 79 - xiaohe
+- name: 🇩🇪 德国 (Germany) 111 - xiaohe
   server: 2.27.59.206
   port: 443
   udp: true
@@ -750,7 +1157,29 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
-- name: 🇪🇪 爱沙尼亚 (Estonia) 80 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 112 - xiaohe
+  server: ru.xiaoliyu.cyou
+  port: 4433
+  udp: true
+  type: hysteria2
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: ru.xiaoliyu.cyou
+  skip-cert-verify: true
+- name: 🇹🇭 泰国 (Thailand) 113 - xiaohe
+  server: 209.33.167.234
+  port: 443
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇪🇪 爱沙尼亚 (Estonia) 114 - xiaohe
   server: 217.60.182.79
   port: 443
   udp: true
@@ -758,31 +1187,14 @@ proxies:
   password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
   sni: cabinet.wwwinternetvideo.click
   skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 81 - xiaohe
-  server: msk.frkn.org
-  port: 443
+- name: 🇩🇪 德国 (Germany) 115 - xiaohe
+  server: p2tun1.greewebservices.ir
+  port: 1010
   udp: true
-  type: hysteria2
-  password: f317b5d6-d399-4d3d-a051-89d674ae953c
-  sni: msk.frkn.org
-  skip-cert-verify: false
-- name: 🇹🇼 中国台湾 (Taiwan) 82 - xiaohe
-  server: 85.237.207.49
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: a56619e2bed91121eabb97d20be207c3
-  sni: 85-237-207-49.liao.kdns.fr
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 83 - xiaohe
-  server: 5.129.235.85
-  port: 443
-  udp: true
-  type: hysteria2
-  password: gf1:gfhysteria2024
-  sni: www.linux.com\u0026insecure=1\u0026allowinsecure=1
-  skip-cert-verify: true
-- name: 🇳🇱 荷兰 (Netherlands) 84 - xiaohe
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: gT36tsiPfnd0np5khJqjyQ
+- name: 🇳🇱 荷兰 (Netherlands) 116 - xiaohe
   server: 51.15.19.206
   port: 8443
   udp: true
@@ -792,7 +1204,15 @@ proxies:
   skip-cert-verify: true
   obfs: salamander
   obfs-password: HysteriaHowdy
-- name: 🇺🇸 美国 (United States) 85 - xiaohe
+- name: 🇺🇸 美国 (United States) 117 - xiaohe
+  server: gta.internet-card.sbs
+  port: 443
+  udp: true
+  type: hysteria2
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: gta.internet-card.sbs
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 118 - xiaohe
   server: 38.60.204.239
   port: 36712
   udp: true
@@ -800,203 +1220,251 @@ proxies:
   password: CompanyHy2_2026!
   sni: 38.60.204.239
   skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 86 - xiaohe
-  server: 104.17.77.77
-  port: 8443
-  udp: true
-  type: vmess
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: v2ray1.dozapp.xyz
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇺🇸 美国 (United States) 01 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 02 - xiaohe
   - 🇺🇸 美国 (United States) 03 - xiaohe
   - 🇺🇸 美国 (United States) 04 - xiaohe
-  - 🇺🇸 美国 (United States) 05 - xiaohe
+  - 🇸🇨 塞舌尔 (Seychelles) 05 - xiaohe
   - 🇺🇸 美国 (United States) 06 - xiaohe
   - 🇺🇸 美国 (United States) 07 - xiaohe
   - 🇺🇸 美国 (United States) 08 - xiaohe
   - 🇺🇸 美国 (United States) 09 - xiaohe
   - 🇺🇸 美国 (United States) 10 - xiaohe
-  - 🇺🇸 美国 (United States) 11 - xiaohe
+  - 🌐 其他地区 (Other) 11 - xiaohe
   - 🇺🇸 美国 (United States) 12 - xiaohe
   - 🇺🇸 美国 (United States) 13 - xiaohe
   - 🇺🇸 美国 (United States) 14 - xiaohe
-  - 🇨🇦 加拿大 (Canada) 15 - xiaohe
+  - 🇺🇸 美国 (United States) 15 - xiaohe
   - 🇺🇸 美国 (United States) 16 - xiaohe
   - 🇺🇸 美国 (United States) 17 - xiaohe
   - 🇺🇸 美国 (United States) 18 - xiaohe
   - 🇺🇸 美国 (United States) 19 - xiaohe
   - 🇺🇸 美国 (United States) 20 - xiaohe
   - 🇺🇸 美国 (United States) 21 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 22 - xiaohe
+  - 🇺🇸 美国 (United States) 22 - xiaohe
   - 🇺🇸 美国 (United States) 23 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 24 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 25 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 27 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 28 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 29 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 30 - xiaohe
-  - 🇫🇷 法国 (France) 31 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 32 - xiaohe
-  - 🇯🇵 日本 (Japan) 33 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 34 - xiaohe
+  - 🇺🇸 美国 (United States) 24 - xiaohe
+  - 🇺🇸 美国 (United States) 25 - xiaohe
+  - 🇺🇸 美国 (United States) 26 - xiaohe
+  - 🇺🇸 美国 (United States) 27 - xiaohe
+  - 🇺🇸 美国 (United States) 28 - xiaohe
+  - 🇺🇸 美国 (United States) 29 - xiaohe
+  - 🇺🇸 美国 (United States) 30 - xiaohe
+  - 🇯🇵 日本 (Japan) 31 - xiaohe
+  - 🇺🇸 美国 (United States) 32 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 33 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 34 - xiaohe
   - 🇺🇸 美国 (United States) 35 - xiaohe
   - 🇺🇸 美国 (United States) 36 - xiaohe
-  - 🇵🇱 波兰 (Poland) 37 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 38 - xiaohe
-  - 🇯🇵 日本 (Japan) 39 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 40 - xiaohe
-  - 🇵🇱 波兰 (Poland) 41 - xiaohe
-  - 🇨🇭 瑞士 (Switzerland) 42 - xiaohe
-  - 🇩🇪 德国 (Germany) 43 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 44 - xiaohe
-  - 🇯🇵 日本 (Japan) 45 - xiaohe
-  - 🇨🇭 瑞士 (Switzerland) 46 - xiaohe
+  - 🇯🇵 日本 (Japan) 37 - xiaohe
+  - 🇯🇵 日本 (Japan) 38 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 39 - xiaohe
+  - 🇯🇵 日本 (Japan) 40 - xiaohe
+  - 🇯🇵 日本 (Japan) 41 - xiaohe
+  - 🇺🇸 美国 (United States) 42 - xiaohe
+  - 🇺🇸 美国 (United States) 43 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 44 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 45 - xiaohe
+  - 🇯🇵 日本 (Japan) 46 - xiaohe
   - 🇯🇵 日本 (Japan) 47 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 48 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 49 - xiaohe
-  - 🇺🇸 美国 (United States) 50 - xiaohe
-  - 🇩🇪 德国 (Germany) 51 - xiaohe
-  - 🇫🇷 法国 (France) 52 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 53 - xiaohe
-  - 🇩🇰 丹麦 (Denmark) 54 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 55 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 56 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 57 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 58 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 59 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 60 - xiaohe
-  - 🇺🇸 美国 (United States) 61 - xiaohe
-  - 🇫🇷 法国 (France) 62 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 63 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 64 - xiaohe
-  - 🇮🇳 印度 (India) 65 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 66 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 67 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 68 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 69 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 70 - xiaohe
-  - 🇺🇸 美国 (United States) 71 - xiaohe
-  - 🇹🇭 泰国 (Thailand) 72 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 73 - xiaohe
-  - 🇺🇸 美国 (United States) 74 - xiaohe
-  - 🇮🇳 印度 (India) 75 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 76 - xiaohe
-  - 🇨🇭 瑞士 (Switzerland) 77 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 78 - xiaohe
-  - 🇩🇪 德国 (Germany) 79 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 80 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 81 - xiaohe
+  - 🇯🇵 日本 (Japan) 48 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 49 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 50 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 51 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 52 - xiaohe
+  - 🇫🇷 法国 (France) 53 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 54 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 55 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 56 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 57 - xiaohe
+  - 🇫🇷 法国 (France) 58 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 59 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 60 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 61 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 62 - xiaohe
+  - 🇫🇷 法国 (France) 63 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 64 - xiaohe
+  - 🇫🇷 法国 (France) 65 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 66 - xiaohe
+  - 🇩🇪 德国 (Germany) 67 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 68 - xiaohe
+  - 🇵🇱 波兰 (Poland) 69 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 70 - xiaohe
+  - 🇵🇱 波兰 (Poland) 71 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 72 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 73 - xiaohe
+  - 🇵🇱 波兰 (Poland) 74 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 75 - xiaohe
+  - 🇩🇪 德国 (Germany) 76 - xiaohe
+  - 🇬🇷 希腊 (Greece) 77 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 78 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 79 - xiaohe
+  - 🇩🇪 德国 (Germany) 80 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 81 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 82 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 83 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 84 - xiaohe
-  - 🇺🇸 美国 (United States) 85 - xiaohe
-  - 🇺🇸 美国 (United States) 86 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 83 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 84 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 85 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 86 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 87 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 88 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 89 - xiaohe
+  - 🇺🇸 美国 (United States) 90 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 91 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 92 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 93 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 94 - xiaohe
+  - 🇮🇳 印度 (India) 95 - xiaohe
+  - 🇮🇳 印度 (India) 96 - xiaohe
+  - 🇯🇵 日本 (Japan) 97 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 98 - xiaohe
+  - 🇯🇵 日本 (Japan) 99 - xiaohe
+  - 🇺🇸 美国 (United States) 100 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 101 - xiaohe
+  - 🇩🇰 丹麦 (Denmark) 102 - xiaohe
+  - 🇺🇸 美国 (United States) 103 - xiaohe
+  - 🇺🇸 美国 (United States) 104 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 105 - xiaohe
+  - 🇩🇪 德国 (Germany) 106 - xiaohe
+  - 🇺🇸 美国 (United States) 107 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 108 - xiaohe
+  - 🇺🇸 美国 (United States) 109 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 110 - xiaohe
+  - 🇩🇪 德国 (Germany) 111 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 112 - xiaohe
+  - 🇹🇭 泰国 (Thailand) 113 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 114 - xiaohe
+  - 🇩🇪 德国 (Germany) 115 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 116 - xiaohe
+  - 🇺🇸 美国 (United States) 117 - xiaohe
+  - 🇺🇸 美国 (United States) 118 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇺🇸 美国 (United States) 01 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
   - 🇺🇸 美国 (United States) 02 - xiaohe
   - 🇺🇸 美国 (United States) 03 - xiaohe
   - 🇺🇸 美国 (United States) 04 - xiaohe
-  - 🇺🇸 美国 (United States) 05 - xiaohe
+  - 🇸🇨 塞舌尔 (Seychelles) 05 - xiaohe
   - 🇺🇸 美国 (United States) 06 - xiaohe
   - 🇺🇸 美国 (United States) 07 - xiaohe
   - 🇺🇸 美国 (United States) 08 - xiaohe
   - 🇺🇸 美国 (United States) 09 - xiaohe
   - 🇺🇸 美国 (United States) 10 - xiaohe
-  - 🇺🇸 美国 (United States) 11 - xiaohe
+  - 🌐 其他地区 (Other) 11 - xiaohe
   - 🇺🇸 美国 (United States) 12 - xiaohe
   - 🇺🇸 美国 (United States) 13 - xiaohe
   - 🇺🇸 美国 (United States) 14 - xiaohe
-  - 🇨🇦 加拿大 (Canada) 15 - xiaohe
+  - 🇺🇸 美国 (United States) 15 - xiaohe
   - 🇺🇸 美国 (United States) 16 - xiaohe
   - 🇺🇸 美国 (United States) 17 - xiaohe
   - 🇺🇸 美国 (United States) 18 - xiaohe
   - 🇺🇸 美国 (United States) 19 - xiaohe
   - 🇺🇸 美国 (United States) 20 - xiaohe
   - 🇺🇸 美国 (United States) 21 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 22 - xiaohe
+  - 🇺🇸 美国 (United States) 22 - xiaohe
   - 🇺🇸 美国 (United States) 23 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 24 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 25 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 26 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 27 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 28 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 29 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 30 - xiaohe
-  - 🇫🇷 法国 (France) 31 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 32 - xiaohe
-  - 🇯🇵 日本 (Japan) 33 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 34 - xiaohe
+  - 🇺🇸 美国 (United States) 24 - xiaohe
+  - 🇺🇸 美国 (United States) 25 - xiaohe
+  - 🇺🇸 美国 (United States) 26 - xiaohe
+  - 🇺🇸 美国 (United States) 27 - xiaohe
+  - 🇺🇸 美国 (United States) 28 - xiaohe
+  - 🇺🇸 美国 (United States) 29 - xiaohe
+  - 🇺🇸 美国 (United States) 30 - xiaohe
+  - 🇯🇵 日本 (Japan) 31 - xiaohe
+  - 🇺🇸 美国 (United States) 32 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 33 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 34 - xiaohe
   - 🇺🇸 美国 (United States) 35 - xiaohe
   - 🇺🇸 美国 (United States) 36 - xiaohe
-  - 🇵🇱 波兰 (Poland) 37 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 38 - xiaohe
-  - 🇯🇵 日本 (Japan) 39 - xiaohe
-  - 🇬🇧 英国 (United Kingdom) 40 - xiaohe
-  - 🇵🇱 波兰 (Poland) 41 - xiaohe
-  - 🇨🇭 瑞士 (Switzerland) 42 - xiaohe
-  - 🇩🇪 德国 (Germany) 43 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 44 - xiaohe
-  - 🇯🇵 日本 (Japan) 45 - xiaohe
-  - 🇨🇭 瑞士 (Switzerland) 46 - xiaohe
+  - 🇯🇵 日本 (Japan) 37 - xiaohe
+  - 🇯🇵 日本 (Japan) 38 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 39 - xiaohe
+  - 🇯🇵 日本 (Japan) 40 - xiaohe
+  - 🇯🇵 日本 (Japan) 41 - xiaohe
+  - 🇺🇸 美国 (United States) 42 - xiaohe
+  - 🇺🇸 美国 (United States) 43 - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 44 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 45 - xiaohe
+  - 🇯🇵 日本 (Japan) 46 - xiaohe
   - 🇯🇵 日本 (Japan) 47 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 48 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 49 - xiaohe
-  - 🇺🇸 美国 (United States) 50 - xiaohe
-  - 🇩🇪 德国 (Germany) 51 - xiaohe
-  - 🇫🇷 法国 (France) 52 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 53 - xiaohe
-  - 🇩🇰 丹麦 (Denmark) 54 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 55 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 56 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 57 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 58 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 59 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 60 - xiaohe
-  - 🇺🇸 美国 (United States) 61 - xiaohe
-  - 🇫🇷 法国 (France) 62 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 63 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 64 - xiaohe
-  - 🇮🇳 印度 (India) 65 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 66 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 67 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 68 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 69 - xiaohe
-  - 🇭🇰 中国香港 (Hong Kong) 70 - xiaohe
-  - 🇺🇸 美国 (United States) 71 - xiaohe
-  - 🇹🇭 泰国 (Thailand) 72 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 73 - xiaohe
-  - 🇺🇸 美国 (United States) 74 - xiaohe
-  - 🇮🇳 印度 (India) 75 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 76 - xiaohe
-  - 🇨🇭 瑞士 (Switzerland) 77 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 78 - xiaohe
-  - 🇩🇪 德国 (Germany) 79 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 80 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 81 - xiaohe
+  - 🇯🇵 日本 (Japan) 48 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 49 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 50 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 51 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 52 - xiaohe
+  - 🇫🇷 法国 (France) 53 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 54 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 55 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 56 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 57 - xiaohe
+  - 🇫🇷 法国 (France) 58 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 59 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 60 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 61 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 62 - xiaohe
+  - 🇫🇷 法国 (France) 63 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 64 - xiaohe
+  - 🇫🇷 法国 (France) 65 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 66 - xiaohe
+  - 🇩🇪 德国 (Germany) 67 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 68 - xiaohe
+  - 🇵🇱 波兰 (Poland) 69 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 70 - xiaohe
+  - 🇵🇱 波兰 (Poland) 71 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 72 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 73 - xiaohe
+  - 🇵🇱 波兰 (Poland) 74 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 75 - xiaohe
+  - 🇩🇪 德国 (Germany) 76 - xiaohe
+  - 🇬🇷 希腊 (Greece) 77 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 78 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 79 - xiaohe
+  - 🇩🇪 德国 (Germany) 80 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 81 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 82 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 83 - xiaohe
-  - 🇳🇱 荷兰 (Netherlands) 84 - xiaohe
-  - 🇺🇸 美国 (United States) 85 - xiaohe
-  - 🇺🇸 美国 (United States) 86 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 83 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 84 - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 85 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 86 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 87 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 88 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 89 - xiaohe
+  - 🇺🇸 美国 (United States) 90 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 91 - xiaohe
+  - 🇨🇭 瑞士 (Switzerland) 92 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 93 - xiaohe
+  - 🇷🇴 罗马尼亚 (Romania) 94 - xiaohe
+  - 🇮🇳 印度 (India) 95 - xiaohe
+  - 🇮🇳 印度 (India) 96 - xiaohe
+  - 🇯🇵 日本 (Japan) 97 - xiaohe
+  - 🇰🇷 韩国 (South Korea) 98 - xiaohe
+  - 🇯🇵 日本 (Japan) 99 - xiaohe
+  - 🇺🇸 美国 (United States) 100 - xiaohe
+  - 🇦🇪 阿联酋 (UAE) 101 - xiaohe
+  - 🇩🇰 丹麦 (Denmark) 102 - xiaohe
+  - 🇺🇸 美国 (United States) 103 - xiaohe
+  - 🇺🇸 美国 (United States) 104 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 105 - xiaohe
+  - 🇩🇪 德国 (Germany) 106 - xiaohe
+  - 🇺🇸 美国 (United States) 107 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 108 - xiaohe
+  - 🇺🇸 美国 (United States) 109 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 110 - xiaohe
+  - 🇩🇪 德国 (Germany) 111 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 112 - xiaohe
+  - 🇹🇭 泰国 (Thailand) 113 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 114 - xiaohe
+  - 🇩🇪 德国 (Germany) 115 - xiaohe
+  - 🇳🇱 荷兰 (Netherlands) 116 - xiaohe
+  - 🇺🇸 美国 (United States) 117 - xiaohe
+  - 🇺🇸 美国 (United States) 118 - xiaohe
 rules:
 - MATCH,PROXIES

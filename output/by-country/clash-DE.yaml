@@ -10,17 +10,39 @@ proxies:
   udp: true
   type: hysteria2
   password: zhangyang
-  sni: https%25253a%25252f%25252fwww.calmloud.com
+  sni: https%2525253a%2525252f%2525252fwww.calmloud.com
   skip-cert-verify: true
 - name: 🇩🇪 德国 (Germany) 02 - xiaohe
+  server: 144.31.168.59
+  port: 443
+  udp: true
+  type: vless
+  uuid: d0f0a880-0df1-48c9-bdf1-5669fb9483ce
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I
+  servername: aotocon.ggisopi.su
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 03 - xiaohe
   server: de-node.rumedia-cdn.com
   port: 25443
   udp: true
   type: hysteria2
   password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
   sni: cf6.rumedia-cdn.com
-  skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 03 - xiaohe
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 04 - xiaohe
+  server: hy2.aspidnet.xyz
+  port: 443
+  udp: true
+  type: hysteria2
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  sni: hy2.aspidnet.xyz
+  skip-cert-verify: false
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+- name: 🇩🇪 德国 (Germany) 05 - xiaohe
   server: 2.27.59.206
   port: 443
   udp: true
@@ -30,6 +52,13 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
+- name: 🇩🇪 德国 (Germany) 06 - xiaohe
+  server: p2tun1.greewebservices.ir
+  port: 1010
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: gT36tsiPfnd0np5khJqjyQ
 proxy-groups:
 - name: PROXIES
   type: select
@@ -38,6 +67,9 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - xiaohe
   - 🇩🇪 德国 (Germany) 02 - xiaohe
   - 🇩🇪 德国 (Germany) 03 - xiaohe
+  - 🇩🇪 德国 (Germany) 04 - xiaohe
+  - 🇩🇪 德国 (Germany) 05 - xiaohe
+  - 🇩🇪 德国 (Germany) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -46,5 +78,8 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 01 - xiaohe
   - 🇩🇪 德国 (Germany) 02 - xiaohe
   - 🇩🇪 德国 (Germany) 03 - xiaohe
+  - 🇩🇪 德国 (Germany) 04 - xiaohe
+  - 🇩🇪 德国 (Germany) 05 - xiaohe
+  - 🇩🇪 德国 (Germany) 06 - xiaohe
 rules:
 - MATCH,PROXIES

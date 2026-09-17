@@ -11,25 +11,62 @@
       "password": "zhangyang",
       "tls": {
         "enabled": true,
-        "server_name": "https%25253a%25252f%25252fwww.calmloud.com",
+        "server_name": "https%2525253a%2525252f%2525252fwww.calmloud.com",
         "insecure": true
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇩🇪 德国 (Germany) 02 - xiaohe",
+      "server": "144.31.168.59",
+      "server_port": 443,
+      "uuid": "d0f0a880-0df1-48c9-bdf1-5669fb9483ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "aotocon.ggisopi.su",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SB1uC0OEveYjSiS_Nuw9Ld-uVVXWqi794OGnldthY3I",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 03 - xiaohe",
       "server": "de-node.rumedia-cdn.com",
       "server_port": 25443,
       "password": "29ffde49-e1d6-4dcd-a135-352920f9f0b8",
       "tls": {
         "enabled": true,
         "server_name": "cf6.rumedia-cdn.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇩🇪 德国 (Germany) 03 - xiaohe",
+      "tag": "🇩🇪 德国 (Germany) 04 - xiaohe",
+      "server": "hy2.aspidnet.xyz",
+      "server_port": 443,
+      "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2.aspidnet.xyz",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "rG07s3COMIEvdnQipRyWzx_H_2xygNC3"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇩🇪 德国 (Germany) 05 - xiaohe",
       "server": "2.27.59.206",
       "server_port": 443,
       "password": "cd74c0a406664a5bc0bac098220a2468",
@@ -44,13 +81,24 @@
       }
     },
     {
+      "type": "shadowsocks",
+      "tag": "🇩🇪 德国 (Germany) 06 - xiaohe",
+      "server": "p2tun1.greewebservices.ir",
+      "server_port": 1010,
+      "method": "chacha20-ietf-poly1305",
+      "password": "gT36tsiPfnd0np5khJqjyQ"
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇩🇪 德国 (Germany) 01 - xiaohe",
         "🇩🇪 德国 (Germany) 02 - xiaohe",
-        "🇩🇪 德国 (Germany) 03 - xiaohe"
+        "🇩🇪 德国 (Germany) 03 - xiaohe",
+        "🇩🇪 德国 (Germany) 04 - xiaohe",
+        "🇩🇪 德国 (Germany) 05 - xiaohe",
+        "🇩🇪 德国 (Germany) 06 - xiaohe"
       ]
     },
     {
@@ -59,7 +107,10 @@
       "outbounds": [
         "🇩🇪 德国 (Germany) 01 - xiaohe",
         "🇩🇪 德国 (Germany) 02 - xiaohe",
-        "🇩🇪 德国 (Germany) 03 - xiaohe"
+        "🇩🇪 德国 (Germany) 03 - xiaohe",
+        "🇩🇪 德国 (Germany) 04 - xiaohe",
+        "🇩🇪 德国 (Germany) 05 - xiaohe",
+        "🇩🇪 德国 (Germany) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
