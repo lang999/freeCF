@@ -12,41 +12,18 @@
       "password": "o2rw2hICwu1blrr_gZAl2Q"
     },
     {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - xiaohe",
-      "server": "31.77.199.147",
-      "server_port": 4443,
-      "uuid": "20dd9433-389e-4573-ba7b-689619cf13da",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "images.unsplash.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "GvkQwcZWiXQBLzEhTVfQkyPpdgo6Opc3RtLsED9sA0A",
-          "short_id": "7da2eae792187ab9"
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 芬兰 (Finland) 01 - xiaohe",
-        "🇫🇮 芬兰 (Finland) 02 - xiaohe"
+        "🇫🇮 芬兰 (Finland) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 芬兰 (Finland) 01 - xiaohe",
-        "🇫🇮 芬兰 (Finland) 02 - xiaohe"
+        "🇫🇮 芬兰 (Finland) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
