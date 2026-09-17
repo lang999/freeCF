@@ -53,15 +53,13 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    "https://wild-cloud-9893.heleimail.workers.dev",
-    "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
     "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
-    "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/karing节点.txt",
-    "https://www.ermao.net/sub/clash/ermao.net",
-    "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/verified.yaml",
-    "https://url.v1.mk/sub?target=clash&url=https%3A%2F%2Fhvwin8.github.io%2Fautojiedian%2Fclash.yaml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fcmliu%2FACL4SSR%2Fmain%2FClash%2Fconfig%2FACL4SSR_Online.ini&exclude=http&include=%E7%BE%8E%E5%9B%BD%7C%E9%9F%A9%E5%9B%BD%7C%E5%8F%B0%E6%B9%BE&append_type=true&tls13=true&sort=true&emoji=true&list=false&xudp=false&udp=true&tfo=true&expand=true&scv=true&fdn=true&clash.doh=true&new_name=true",
-    "https://raw.githubusercontent.com/suiyuan8/clash/refs/heads/main/config2",
-    "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_zijian_auto?token=xgy1nCsG7xgerdecv4QRn",
+    "https://ghfast.top/https://raw.githubusercontent.com/FGBLH/fgrjk/refs/heads/main/karing节点.txt",
+    "https://www.ermao.net/sub/clash/ermao.net",
+    "https://raw.githubusercontent.com/LeilaoMi/AutoMergePublicNodes-Optimized/main/output/verified.yaml",
+    "https://hvwin8.github.io/autojiedian/clash.yaml",
+    "https://raw.githubusercontent.com/suiyuan8/clash/refs/heads/main/config2",
+    "https://sub.dmit.dpdns.org/share/sub/dingyue_Center_zijian_auto?token=xgy1nCsG7xgerdecv4QRn",
 ]
 
 OUTPUT_DIR = "output"
