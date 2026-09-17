@@ -33,6 +33,7 @@ import socket
 import zipfile
 import tarfile
 import platform
+import struct
 import subprocess
 import ipaddress
 import urllib.parse
@@ -85,6 +86,24 @@ IP_ECHO_TIMEOUT        = 6.0     # 出口 IP 检测超时
 SPEED_TEST_BYTES       = 2_500_000   # 2.5MB 下载测速 (2.5MB 足以算准吞吐且 < 70KB/s 判定线不变)
 SPEED_TEST_BUDGET      = 5.0         # 测速时间预算 (秒) — 2.5MB@70KB/s=36s 必断流, 5s 预算足够判型
 SPEED_MIN_BYTES_PER_S  = 70_000      # 吞吐 < 70KB/s 判定断流/不可用 (标准不变)
+
+# --- 大陆视角过滤层 (CN view) ---
+#  背景: Actions 在美区测活 => "海外可达即入库", 但大量 CF 入口 IP 大陆直连不通。
+#  做法: 经一个【大陆出口】的 SOCKS5/HTTP 代理, 对存活节点做 TCP 可达性复核,
+#        大陆连不上的直接剔除 (或打标签降级)。
+#  配置:
+#    CN_PROXY=socks5://user:pass@ip:1080   大陆出口代理 (支持 socks5/socks5h/http, 带认证)
+#    CN_FILTER=drop|tag|off                阻断节点处理方式 (默认 drop 剔除)
+#    CN_DEEP=1                             进阶: 让阶段B全流程测活也走该出口 (真·大陆视角, 但慢很多)
+#    CN_AUDIT_TIMEOUT=4                    单目标 TCP 复核超时 (秒)
+CN_PROXY           = os.environ.get("CN_PROXY", "").strip()
+CN_FILTER          = os.environ.get("CN_FILTER", "drop").strip().lower()
+CN_AUDIT_TIMEOUT   = float(os.environ.get("CN_AUDIT_TIMEOUT", "4.0"))
+CN_AUDIT_WORKERS   = int(os.environ.get("CN_AUDIT_WORKERS", "64"))
+# 控制组 (护栏): 大陆必通 —— 全不通 => 代理挂了/网络异常, 放弃本次复核 (防误杀)
+CN_CTRL_MUST_REACH = [("223.5.5.5", 443), ("www.baidu.com", 443)]
+# 视角自检: 大陆直连必不通 —— 若可达 => 出口不是大陆 (代理回落直连/本身在墙外)
+CN_CTRL_MUST_FAIL  = [("www.google.com", 443), ("8.8.8.8", 443)]
 IP_ECHO_URLS = [                    # 经代理获取出口 IP (多路冗余)
     "https://api.ip.sb/geoip",                         # JSON: country_code/asn/isp
     "https://ipinfo.io/json",                          # JSON: country/org
@@ -1094,6 +1113,162 @@ def prefilter_candidates(candidates: list) -> list:
 
 
 # ═══════════════════════════════════════════N═══════════════════════
+# 阶段 A.5: 大陆视角过滤层 (CN view)
+#   海外测活 → 大陆复核 → 剔除大陆连不上的节点
+# ═══════════════════════════════════════════N═══════════════════════
+
+def _parse_proxy_url(url: str):
+    """解析 socks5h?://user:pass@host:port | http://... → dict; 失败返回 None"""
+    m = re.match(r"^(socks5h?|http)://(?:([^:@/]+):([^@/]*)@)?([^:/]+):(\d+)$", (url or "").strip())
+    if not m:
+        return None
+    scheme, user, pwd, host, port = m.groups()
+    return {"scheme": scheme, "user": user or "", "password": pwd or "",
+            "host": host, "port": int(port),
+            "type": "socks" if scheme.startswith("socks5") else "http"}
+
+
+def proxy_tcp_probe(px: dict, host: str, port: int, timeout: float):
+    """经代理做一次 TCP CONNECT (不依赖第三方库)。返回 (ok, err)"""
+    try:
+        s = socket.create_connection((px["host"], px["port"]), timeout=timeout)
+    except Exception as e:
+        return False, "proxy-unreachable:%s" % type(e).__name__
+    try:
+        s.settimeout(timeout)
+        if px["type"] == "socks":
+            if px["user"]:
+                s.sendall(b"\x05\x02\x00\x02")
+                r = s.recv(2)
+                if len(r) < 2 or r[1] != 2:
+                    return False, "socks5:auth-method-rejected"
+                u, p = px["user"].encode(), px["password"].encode()
+                s.sendall(b"\x01" + bytes([len(u)]) + u + bytes([len(p)]) + p)
+                r = s.recv(2)
+                if len(r) < 2 or r[1] != 0:
+                    return False, "socks5:auth-failed"
+            else:
+                s.sendall(b"\x05\x01\x00")
+                r = s.recv(2)
+                if len(r) < 2 or r[1] != 0:
+                    return False, "socks5:no-auth-rejected"
+            hb = host.encode()
+            s.sendall(b"\x05\x01\x00\x03" + bytes([len(hb)]) + hb + struct.pack("!H", port))
+            resp = s.recv(10)
+            if len(resp) < 2 or resp[1] != 0:
+                return False, "socks5-connect-code=%s" % (resp[1] if len(resp) > 1 else "?")
+            return True, ""
+        # http CONNECT
+        req = "CONNECT %s:%d HTTP/1.1\r\nHost: %s:%d\r\n" % (host, port, host, port)
+        if px["user"]:
+            tok = base64.b64encode(("%s:%s" % (px["user"], px["password"])).encode()).decode()
+            req += "Proxy-Authorization: Basic %s\r\n" % tok
+        s.sendall((req + "\r\n").encode())
+        resp = s.recv(256)
+        if b" 200 " in resp.split(b"\r\n", 1)[0]:
+            return True, ""
+        return False, "http-connect:%s" % resp.split(b"\r\n", 1)[0][:40]
+    except Exception as e:
+        return False, "%s:%s" % (type(e).__name__, str(e)[:40])
+    finally:
+        try:
+            s.close()
+        except Exception:
+            pass
+
+
+def cn_viewpoint_check(px: dict):
+    """两道安全阀: 控制组(大陆必通) + 视角自检(大陆必不通)。返回 (ok, detail)"""
+    reach_ok = 0
+    for h, p in CN_CTRL_MUST_REACH:
+        ip = resolve_host(h) or h
+        ok, err = proxy_tcp_probe(px, ip, p, CN_AUDIT_TIMEOUT)
+        reach_ok += ok
+        print("    [控制组]   %-20s %s" % ("%s:%s" % (h, p), "可达" if ok else "不通 (%s)" % err))
+    if reach_ok == 0:
+        return False, "控制组全部不通 —— 代理挂了或网络异常, 放弃大陆复核 (不写任何剔除结论)"
+    leaked = 0
+    for h, p in CN_CTRL_MUST_FAIL:
+        ip = resolve_host(h) or h
+        ok, err = proxy_tcp_probe(px, ip, p, CN_AUDIT_TIMEOUT)
+        leaked += ok
+        print("    [视角自检] %-20s %s" % ("%s:%s" % (h, p), "可达 (异常!)" if ok else "不可达 (符合大陆特征)"))
+    if leaked:
+        return False, "%d 个大陆必不通目标可达 —— 该出口不是大陆 (或代理回落直连)" % leaked
+    return True, "视角自检通过 (大陆直连特征吻合)"
+
+
+def cn_review(test_results: list) -> list:
+    """阶段 4.6: 大陆视角复核 —— 经 CN_PROXY 对存活节点做 TCP 可达性快筛"""
+    if CN_FILTER == "off":
+        print("[*] 大陆视角过滤层: CN_FILTER=off, 跳过")
+        return test_results
+    if not CN_PROXY:
+        print("[*] 大陆视角过滤层: 未配置 CN_PROXY, 跳过 (可选增强; 配好大陆出口代理即可启用)")
+        return test_results
+    # ★ 支持多出口轮换: CN_PROXY=socks5://a:1,http://b:2,... → 取第一个通过自检的
+    #   (免费大陆代理寿命短, 配 3~5 个可显著提高过滤层的可用率)
+    cands = [c.strip() for c in CN_PROXY.split(",") if c.strip()]
+    px = None
+    for cand in cands:
+        p = _parse_proxy_url(cand)
+        if not p:
+            print("[!] 跳过无法解析的出口: %s" % cand)
+            continue
+        print("[*] 大陆视角过滤层: 候选出口 %s://%s:%d%s" % (
+            p["scheme"], p["host"], p["port"], " (带认证)" if p["user"] else ""))
+        ok2, detail = cn_viewpoint_check(p)
+        if ok2:
+            px = p
+            print("[+] %s" % detail)
+            break
+        print("[!] 该出口自检未通过: %s" % detail)
+        if len(cands) > 1:
+            print("[*] 尝试下一个候选出口 ...")
+    if not px:
+        print("[!] 所有候选出口均不可用 — 为避免误杀, 本次不改动测活结果 (跳过大陆过滤)")
+        return test_results
+
+    udp_protos = ("hysteria2", "tuic")
+    udp_keys = {(r["server"], r["port"]) for r in test_results if r.get("proto") in udp_protos}
+    targets = sorted({(r["server"], r["port"]) for r in test_results})
+    print("[*] 大陆复核 %d 个目标 (并发 %d, 超时 %.1fs) ..." % (
+        len(targets), CN_AUDIT_WORKERS, CN_AUDIT_TIMEOUT))
+
+    def _probe(k):
+        if k in udp_keys:
+            return k, None, "udp-skip"      # UDP 无法经 SOCKS5 验证 → 不判死
+        ok2, err = proxy_tcp_probe(px, k[0], k[1], CN_AUDIT_TIMEOUT)
+        return k, ok2, err
+
+    verdict, done = {}, 0
+    with ThreadPoolExecutor(max_workers=CN_AUDIT_WORKERS) as ex:
+        for k, ok2, err in ex.map(_probe, targets):
+            verdict[k] = (ok2, err)
+            done += 1
+            if done % 50 == 0:
+                print("    复核进度 %d/%d" % (done, len(targets)))
+
+    blocked = [k for k, (v, _) in verdict.items() if v is False]
+    for r in test_results:
+        v, err = verdict.get((r["server"], r["port"]), (None, ""))
+        r["cn_reachable"] = v
+        r["cn_err"] = err
+    print("[+] 大陆复核: 可达 %d | 阻断 %d | 未验证(UDP) %d" % (
+        sum(1 for v, _ in verdict.values() if v is True), len(blocked),
+        sum(1 for v, _ in verdict.values() if v is None)))
+
+    if CN_FILTER == "tag":
+        print("[*] CN_FILTER=tag: 保留阻断节点, 仅打标签 (cn_reachable=False)")
+        return test_results
+    kept = [r for r in test_results if r.get("cn_reachable") is not False]
+    print("[+] 剔除大陆不可达: -%d (剩 %d)" % (len(test_results) - len(kept), len(kept)))
+    if blocked:
+        print("    样例: %s" % ", ".join("%s:%d" % k for k in blocked[:8]))
+    return kept
+
+
+# ═══════════════════════════════════════════N═══════════════════════
 # 阶段 B: sing-box 真实测活
 # ═══════════════════════════════════════════N═══════════════════════
 
@@ -1120,29 +1295,33 @@ def build_test_config(outbound: dict, socks_port: int, chain_relay: dict = None)
         outbounds.append(relay)
         node["detour"] = "chain-relay"
 
-    # ══ 前置代理 (链式) ═════════════════════════════════════════════
-    # 模拟 GitHub Actions 海外视角:
-    #   - 本地大陆开发机: 经前置代理(默认 v2rayN 127.0.0.1:10808)出海 → 等效 CI 视角
-    #     (大陆直连目标节点会被 GFW 拦截, 造成本地假死 ≠ 节点死亡)
-    #   - GitHub Actions: FRONT_PROXY 为空 → 直连 (Azure US 本就是海外视角)
-    # 用法: 环境变量 FRONT_PROXY=socks5://127.0.0.1:10808
+    # ══ 前置代理 (链式出口) ═════════════════════════════════════════
+    # 用途 A: 本地大陆开发机经前置代理出海 → 等效 CI 海外视角 (v2rayN 127.0.0.1:10808)
+    # 用途 B: CN_DEEP=1 时, 全流程测活经【大陆出口】代理 → 真·大陆视角测活
+    #   (注意: 大陆视角下测出的"死"= 大陆直连不可用, 对经前置代理使用的用户仍是好节点)
+    # 用法: FRONT_PROXY=socks5://127.0.0.1:10808 | CN_DEEP=1 CN_PROXY=socks5://user:pass@ip:1080
+    # ★ 支持带认证 (user:pass@host:port) — 大陆机房代理几乎都需要认证
     front = os.environ.get("FRONT_PROXY", "").strip()
+    if os.environ.get("CN_DEEP", "").strip() in ("1", "true", "yes") and CN_PROXY:
+        front = CN_PROXY
     if front and not chain_relay:
-        # 解析 socks5://host:port → socks outbound
-        m = re.match(r"^(socks5h?|http)://([^:]+):(\d+)$", front)
-        if m:
-            scheme, fhost, fport = m.groups()
-            ftype = "socks" if scheme.startswith("socks5") else "http"
+        px = _parse_proxy_url(front)
+        if px:
             front_out = {
-                "type": ftype, "tag": "front-proxy",
-                "server": fhost, "server_port": int(fport),
+                "type": px["type"], "tag": "front-proxy",
+                "server": px["host"], "server_port": px["port"],
             }
-            if ftype == "socks":
+            if px["type"] == "socks":
                 front_out["version"] = "5"
+            if px["user"]:
+                front_out["username"] = px["user"]
+                front_out["password"] = px["password"]
             outbounds.append(front_out)
             # 节点出站流量经前置代理 (detour 链式)
             node["detour"] = "front-proxy"
-            print_once("_FRONT_ENABLED", f"[*] 前置代理已启用: {front} (模拟 CI 海外视角)")
+            print_once("_FRONT_ENABLED", f"[*] 前置出口已启用: {px['scheme']}://{px['host']}:{px['port']} (带认证={bool(px['user'])})")
+        else:
+            print_once("_FRONT_BAD", f"[!] 前置出口地址无法解析, 已忽略: {front}")
 
     config = {
         "log": {"level": "warn"},   # 实测: silent 不是合法级别 (trace/debug/info/warn/error/fatal/panic)
@@ -2585,6 +2764,13 @@ def main():
         if backfilled:
             print(f"[+] 重复节点回填: +{backfilled} (继承代表测活结果)")
         test_results = expanded
+
+    # 4.6 ★ 大陆视角过滤层: 经大陆出口代理复核, 剔除大陆连不上的节点
+    #     (海外可达 ≠ 大陆可达: 大量 CF 入口 IP 在美区测活通过、大陆直连不通 — 本层专治此问题)
+    test_results = cn_review(test_results)
+    if not test_results:
+        print("[!] 大陆复核后无剩余节点 — 保留上次 output, 不覆盖订阅文件")
+        return
 
     # 5. ★ 家宽链式复测: 用最快存活节点做前置双跳复测家宽候选
     #    (模拟用户 v2rayN 链式场景, 双跳失败的家宽降级普通区 — 提高链式可用率)
