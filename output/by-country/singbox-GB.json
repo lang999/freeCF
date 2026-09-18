@@ -6,23 +6,23 @@
     {
       "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - xiaohe",
-      "server": "129.151.75.102",
+      "server": "144.24.226.249",
       "server_port": 61312,
       "method": "2022-blake3-chacha20-poly1305",
-      "password": "my66u+JIEnQPAHXgaWDetuCsLnXPfyJPGAfDVMfKUtY="
+      "password": "axZ54YHizH8C2/85gqPV+VCC6r0h+nWWGemeypymi2I="
     },
     {
       "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
-      "server": "144.24.225.111",
+      "server": "144.24.231.175",
       "server_port": 61312,
       "method": "2022-blake3-chacha20-poly1305",
-      "password": "xtHPuZw32Ek7q4odOVXoMn+UY9C/IdokDkolQjvdxrk="
+      "password": "lvowWeKVBF+PManXpAfXqZ2beNoI3O13BDm6gzsH7Qk="
     },
     {
       "type": "hysteria2",
       "tag": "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
-      "server": "13.40.130.216",
+      "server": "vpn-uk-002.fastervpn.world",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
@@ -34,12 +34,12 @@
     {
       "type": "hysteria2",
       "tag": "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
-      "server": "vpn-uk-002.fastervpn.world",
+      "server": "13.40.130.216",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "127.0.0.1",
+        "server_name": "vpn-uk-002.fastervpn.world",
         "insecure": true
       }
     },

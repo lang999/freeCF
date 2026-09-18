@@ -5,21 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇬🇧 英国 (United Kingdom) 01 - xiaohe
-  server: 129.151.75.102
+  server: 144.24.226.249
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: my66u+JIEnQPAHXgaWDetuCsLnXPfyJPGAfDVMfKUtY=
+  password: axZ54YHizH8C2/85gqPV+VCC6r0h+nWWGemeypymi2I=
 - name: 🇬🇧 英国 (United Kingdom) 02 - xiaohe
-  server: 144.24.225.111
+  server: 144.24.231.175
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: xtHPuZw32Ek7q4odOVXoMn+UY9C/IdokDkolQjvdxrk=
+  password: lvowWeKVBF+PManXpAfXqZ2beNoI3O13BDm6gzsH7Qk=
 - name: 🇬🇧 英国 (United Kingdom) 03 - xiaohe
-  server: 13.40.130.216
+  server: vpn-uk-002.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
@@ -27,12 +27,12 @@ proxies:
   sni: vpn-uk-002.fastervpn.world
   skip-cert-verify: true
 - name: 🇬🇧 英国 (United Kingdom) 04 - xiaohe
-  server: vpn-uk-002.fastervpn.world
+  server: 13.40.130.216
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 127.0.0.1
+  sni: vpn-uk-002.fastervpn.world
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES

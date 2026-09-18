@@ -6,14 +6,17 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe",
-      "server": "172.64.42.85",
-      "server_port": 2086,
+      "server": "172.64.154.8",
+      "server_port": 2052,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
+        "path": "/?ed=2560",
         "headers": {
           "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
