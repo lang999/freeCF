@@ -6,8 +6,8 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 01 - xiaohe",
-      "server": "172.64.32.103",
-      "server_port": 2052,
+      "server": "162.159.24.131",
+      "server_port": 2086,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
@@ -22,22 +22,22 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 02 - xiaohe",
-      "server": "108.162.198.178",
-      "server_port": 8080,
+      "server": "188.114.97.6",
+      "server_port": 2052,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 03 - xiaohe",
-      "server": "172.64.154.8",
-      "server_port": 2052,
+      "server": "108.162.198.178",
+      "server_port": 8880,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
@@ -50,6 +50,36 @@
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 04 - xiaohe",
+      "server": "104.18.47.113",
+      "server_port": 2052,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
+      "server": "172.64.52.6",
+      "server_port": 8080,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
       "server": "104.18.46.234",
       "server_port": 8080,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
@@ -63,117 +93,72 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 05 - xiaohe",
-      "server": "108.162.198.178",
-      "server_port": 2082,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 06 - xiaohe",
-      "server": "108.162.198.178",
-      "server_port": 2095,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
       "tag": "🇺🇸 美国 (United States) 07 - xiaohe",
-      "server": "188.114.97.6",
-      "server_port": 2052,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "server": "139.64.235.225",
+      "server_port": 443,
+      "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
+      "tls": {
+        "enabled": true,
+        "server_name": "nb.lovecf.ggff.net",
+        "insecure": true
+      },
       "transport": {
         "type": "ws",
-        "path": "/",
+        "path": "/proxyip=us.xiabibi.cf",
         "headers": {
-          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
+          "Host": "nb.lovecf.ggff.net"
         }
       }
     },
     {
       "type": "shadowsocks",
       "tag": "🇺🇸 美国 (United States) 08 - xiaohe",
-      "server": "129.146.5.198",
+      "server": "129.146.5.155",
       "server_port": 50356,
       "method": "2022-blake3-chacha20-poly1305",
-      "password": "Xi7OoxXHdGSML35YG7Nj7aNTROGvk1nZf4DUHFe4d/M="
+      "password": "weY5SuElMZv3cFUuqwueCsMJOtulfSGK+49UclgGrog="
     },
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 09 - xiaohe",
-      "server": "104.16.111.193",
-      "server_port": 443,
-      "uuid": "8102891d-7b37-4dc5-8261-9474b59b5c63",
-      "tls": {
-        "enabled": true,
-        "server_name": "vip.868068.xyz",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "server": "162.159.0.169",
+      "server_port": 2052,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/proxyip=us.xiabibi.cf",
+        "path": "/?ed=2560",
         "headers": {
-          "Host": "vip.868068.xyz"
-        }
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 10 - xiaohe",
-      "server": "188.114.97.6",
-      "server_port": 443,
-      "uuid": "b2593749-691c-428c-9481-14979cba3446",
-      "tls": {
-        "enabled": true,
-        "server_name": "xi.tbv.ccwu.cc",
-        "insecure": false
-      },
+      "server": "172.64.42.85",
+      "server_port": 2095,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/proxyip=us.xiabibi.cf",
+        "path": "/?ed=2560",
         "headers": {
-          "Host": "xi.tbv.ccwu.cc"
-        }
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "🇺🇸 美国 (United States) 11 - xiaohe",
-      "server": "43.173.90.202",
-      "server_port": 443,
-      "password": "sg-trojan-2026",
-      "tls": {
-        "enabled": true,
-        "server_name": "sg-proxy.local",
-        "insecure": true
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 12 - xiaohe",
-      "server": "66.235.200.207",
+      "tag": "🇺🇸 美国 (United States) 11 - xiaohe",
+      "server": "139.64.235.1",
       "server_port": 443,
-      "uuid": "b2593749-691c-428c-9481-14979cba3446",
+      "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
       "tls": {
         "enabled": true,
-        "server_name": "xi.tbv.ccwu.cc",
+        "server_name": "nb.lovecf.ggff.net",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -184,13 +169,13 @@
         "type": "ws",
         "path": "/proxyip=us.xiabibi.cf",
         "headers": {
-          "Host": "xi.tbv.ccwu.cc"
+          "Host": "nb.lovecf.ggff.net"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 13 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 12 - xiaohe",
       "server": "104.18.34.14",
       "server_port": 2095,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
@@ -202,22 +187,59 @@
       }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 13 - xiaohe",
+      "server": "154.21.89.50",
+      "server_port": 56782,
+      "uuid": "64f776a9-1c2f-4012-a4b7-da4f4958f727",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "addons.mozilla.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "a89JsIKpeVClqRr4LykJGLaO-i5iObJUvhwNu4yv2CQ",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
       "tag": "🇺🇸 美国 (United States) 14 - xiaohe",
-      "server": "3.135.191.150",
+      "server": "108.59.244.158",
       "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "password": "1eaa7584af3e68bb8425908b6f78aa31",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 15 - xiaohe",
+      "server": "163.192.14.135",
+      "server_port": 50160,
+      "password": "099830134df5ac3a04a4b21d39b8c395",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "insecure": true
+      }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 15 - xiaohe",
-      "server": "104.18.42.54",
-      "server_port": 2096,
-      "uuid": "8102891d-7b37-4dc5-8261-9474b59b5c63",
+      "tag": "🇺🇸 美国 (United States) 16 - xiaohe",
+      "server": "66.235.200.186",
+      "server_port": 443,
+      "uuid": "b2593749-691c-428c-9481-14979cba3446",
       "tls": {
         "enabled": true,
-        "server_name": "vip.868068.xyz",
+        "server_name": "xi.tbv.ccwu.cc",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -228,13 +250,35 @@
         "type": "ws",
         "path": "/proxyip=us.xiabibi.cf",
         "headers": {
-          "Host": "vip.868068.xyz"
+          "Host": "xi.tbv.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 17 - xiaohe",
+      "server": "3.141.200.225",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 18 - xiaohe",
+      "server": "104.18.46.46",
+      "server_port": 8880,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 16 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 19 - xiaohe",
       "server": "91.209.253.119",
       "server_port": 443,
       "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
@@ -252,54 +296,57 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 17 - xiaohe",
-      "server": "129.146.75.221",
-      "server_port": 50356,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "ko88AO1Lj50PH3xGQ/SzJChWovcD99np3GwLcJwj/Eo="
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 18 - xiaohe",
-      "server": "142.249.37.90",
-      "server_port": 44356,
-      "password": "dongtaiwang.com",
-      "tls": {
-        "enabled": true,
-        "server_name": "hy2.561891.xyz",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 19 - xiaohe",
-      "server": "66.94.121.46",
-      "server_port": 443,
-      "password": "gf1:gfhysteria2024",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 20 - xiaohe",
-      "server": "108.162.198.178",
-      "server_port": 80,
+      "server": "188.114.97.6",
+      "server_port": 2082,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
         "path": "/",
         "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇺🇸 美国 (United States) 21 - xiaohe",
+      "server": "212.104.128.45",
+      "server_port": 443,
+      "uuid": "b2593749-691c-428c-9481-14979cba3446",
+      "tls": {
+        "enabled": true,
+        "server_name": "xi.tbv.ccwu.cc",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=us.xiabibi.cf",
+        "headers": {
+          "Host": "xi.tbv.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 22 - xiaohe",
+      "server": "172.64.53.55",
+      "server_port": 2095,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 23 - xiaohe",
       "server": "31.43.179.20",
       "server_port": 443,
       "uuid": "b2593749-691c-428c-9481-14979cba3446",
@@ -317,37 +364,138 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 22 - xiaohe",
-      "server": "129.146.5.155",
-      "server_port": 50356,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "weY5SuElMZv3cFUuqwueCsMJOtulfSGK+49UclgGrog="
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 24 - xiaohe",
+      "server": "162.159.39.218",
+      "server_port": 8880,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2560",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        },
+        "max_early_data": 2560,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 25 - xiaohe",
+      "server": "43.173.90.202",
+      "server_port": 443,
+      "password": "sg-trojan-2026",
+      "tls": {
+        "enabled": true,
+        "server_name": "sg-proxy.local",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 26 - xiaohe",
+      "server": "hy2.123266.xyz",
+      "server_port": 33333,
+      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2.123266.xyz",
+        "insecure": true
+      }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 23 - xiaohe",
-      "server": "34.19.91.203",
-      "server_port": 443,
-      "uuid": "9d0395c0-016f-453e-b0be-fc66f1ee1d80",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "aGm3egxU7SVqVw-oxqXbJ0u4ctldnmTjwaDh4Mao2EE",
-          "short_id": "bd4aa541e5306ba2"
+      "tag": "🇺🇸 美国 (United States) 27 - xiaohe",
+      "server": "108.162.198.178",
+      "server_port": 8080,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 24 - xiaohe",
-      "server": "139.64.235.77",
+      "tag": "🇺🇸 美国 (United States) 28 - xiaohe",
+      "server": "104.21.34.106",
+      "server_port": 443,
+      "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
+      "tls": {
+        "enabled": true,
+        "server_name": "nb.lovecf.ggff.net",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=us.xiabibi.cf",
+        "headers": {
+          "Host": "nb.lovecf.ggff.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 29 - xiaohe",
+      "server": "188.114.97.6",
+      "server_port": 2086,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 30 - xiaohe",
+      "server": "172.64.42.85",
+      "server_port": 2086,
+      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 31 - xiaohe",
+      "server": "api.videobereg.cc",
+      "server_port": 443,
+      "uuid": "80ed15d0-e6ec-4a16-bdb2-4785946c67c7",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.videobereg.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "a8"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 32 - xiaohe",
+      "server": "3.135.191.150",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 33 - xiaohe",
+      "server": "139.64.235.174",
       "server_port": 443,
       "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
       "tls": {
@@ -369,75 +517,41 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 25 - xiaohe",
-      "server": "155.248.209.237",
-      "server_port": 33333,
-      "password": "bce6c821-200d-421f-bf3d-7159e5246ea0",
+      "tag": "🇺🇸 美国 (United States) 34 - xiaohe",
+      "server": "66.94.121.46",
+      "server_port": 443,
+      "password": "gf1:gfhysteria2024",
       "tls": {
         "enabled": true,
-        "server_name": "hy2.123266.xyz",
-        "insecure": false
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 26 - xiaohe",
-      "server": "163.192.14.135",
-      "server_port": 50160,
-      "password": "099830134df5ac3a04a4b21d39b8c395",
-      "tls": {
-        "enabled": true,
-        "server_name": "t.me",
+        "server_name": "66.94.121.46",
         "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 27 - xiaohe",
-      "server": "172.64.42.85",
-      "server_port": 2086,
+      "tag": "🇺🇸 美国 (United States) 35 - xiaohe",
+      "server": "108.162.198.178",
+      "server_port": 2095,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
+        "path": "/",
         "headers": {
           "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
         }
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 28 - xiaohe",
-      "server": "159.223.157.129",
-      "server_port": 8443,
-      "password": "suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.microsoft.com",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 29 - xiaohe",
-      "server": "195.85.23.252",
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 36 - xiaohe",
+      "server": "107.174.88.128",
       "server_port": 443,
-      "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
-      "tls": {
-        "enabled": true,
-        "server_name": "nb.lovecf.ggff.net",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/proxyip=us.xiabibi.cf",
-        "headers": {
-          "Host": "nb.lovecf.ggff.net"
-        }
-      }
+      "method": "chacha20-ietf-poly1305",
+      "password": "063aee2ed1124285b5d8a8b049e24cba"
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 30 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 37 - xiaohe",
       "server": "www.whatismyip.net",
       "server_port": 2095,
       "uuid": "86c50e3a-5b87-49dd-bd20-03c7f2735e40",
@@ -450,10 +564,57 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 38 - xiaohe",
+      "server": "hy2.561891.xyz",
+      "server_port": 44356,
+      "password": "dongtaiwang.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "hy2.561891.xyz",
+        "insecure": false
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 39 - xiaohe",
+      "server": "vpn-us-003.fastervpn.world",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-us-003.fastervpn.world",
+        "insecure": true
+      }
+    },
+    {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 31 - xiaohe",
-      "server": "104.18.47.113",
-      "server_port": 2095,
+      "tag": "🇺🇸 美国 (United States) 40 - xiaohe",
+      "server": "sa1.zuoai.cf",
+      "server_port": 443,
+      "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
+      "tls": {
+        "enabled": true,
+        "server_name": "nb.lovecf.ggff.net",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=us.xiabibi.cf",
+        "headers": {
+          "Host": "nb.lovecf.ggff.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 41 - xiaohe",
+      "server": "104.18.39.218",
+      "server_port": 2086,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
@@ -467,21 +628,33 @@
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 32 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 42 - xiaohe",
+      "server": "172.64.145.202",
+      "server_port": 443,
+      "uuid": "b2593749-691c-428c-9481-14979cba3446",
+      "tls": {
+        "enabled": true,
+        "server_name": "xi.tbv.ccwu.cc",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/proxyip=us.xiabibi.cf",
+        "headers": {
+          "Host": "xi.tbv.ccwu.cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 43 - xiaohe",
       "server": "172.64.146.228",
       "server_port": 443,
       "uuid": "91d28760-ecf1-450b-9170-d310111a0e6d",
       "tls": {
         "enabled": true,
         "server_name": "edfc774f.69lover.site",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "insecure": false
       },
       "transport": {
         "type": "ws",
@@ -492,27 +665,32 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 33 - xiaohe",
-      "server": "91.209.253.229",
-      "server_port": 443,
-      "uuid": "b09dfed1-90fa-4353-8bdf-de1edb2e2d79",
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 44 - xiaohe",
+      "server": "159.223.157.129",
+      "server_port": 8443,
+      "password": "suAmQS9LlInNq4Wumh-FUF4GGlpgmG_g",
       "tls": {
         "enabled": true,
-        "server_name": "nb.lovecf.ggff.net",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/proxyip=us.xiabibi.cf",
-        "headers": {
-          "Host": "nb.lovecf.ggff.net"
-        }
+        "server_name": "159.223.157.129",
+        "insecure": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 45 - xiaohe",
+      "server": "64.188.98.171",
+      "server_port": 443,
+      "password": "mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj",
+      "tls": {
+        "enabled": true,
+        "server_name": "germany3.h2corp.local",
+        "insecure": true
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 34 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 46 - xiaohe",
       "server": "cf3.danfeng.eu.org",
       "server_port": 8443,
       "uuid": "8102891d-7b37-4dc5-8261-9474b59b5c63",
@@ -522,7 +700,7 @@
         "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
@@ -534,44 +712,8 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 35 - xiaohe",
-      "server": "es1.xiaoliyu.cyou",
-      "server_port": 4433,
-      "password": "19f72087-4591-4d72-930b-2697078ec2be",
-      "tls": {
-        "enabled": true,
-        "server_name": "es1.xiaoliyu.cyou",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 36 - xiaohe",
-      "server": "2.27.249.79",
-      "server_port": 443,
-      "password": "cd74c0a406664a5bc0bac098220a2468",
-      "tls": {
-        "enabled": true,
-        "server_name": "nl1.sferavpn.pro",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "44f1c1e2f8b99e792ceed574627a1eb0"
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇺🇸 美国 (United States) 37 - xiaohe",
-      "server": "129.146.78.85",
-      "server_port": 50356,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "sbJ5llt+YoGtqLI7RpEhaXIgLTN+tnwzrB3vSOAvs04="
-    },
-    {
       "type": "vmess",
-      "tag": "🇺🇸 美国 (United States) 38 - xiaohe",
+      "tag": "🇺🇸 美国 (United States) 47 - xiaohe",
       "server": "www.shopify.com",
       "server_port": 443,
       "uuid": "6a89a215-22bf-4bd7-9642-b95b2e09583a",
@@ -591,14 +733,75 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇺🇸 美国 (United States) 39 - xiaohe",
-      "server": "us4.xiaoliyu.cyou",
+      "tag": "🇺🇸 美国 (United States) 48 - xiaohe",
+      "server": "2.27.249.79",
+      "server_port": 443,
+      "password": "cd74c0a406664a5bc0bac098220a2468",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl1.sferavpn.pro",
+        "insecure": false
+      },
+      "obfs": {
+        "type": "salamander",
+        "password": "44f1c1e2f8b99e792ceed574627a1eb0"
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "🇺🇸 美国 (United States) 49 - xiaohe",
+      "server": "es1.xiaoliyu.cyou",
       "server_port": 4433,
       "password": "19f72087-4591-4d72-930b-2697078ec2be",
       "tls": {
         "enabled": true,
-        "server_name": "t.me",
+        "server_name": "es1.xiaoliyu.cyou",
         "insecure": true
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 50 - xiaohe",
+      "server": "129.146.5.198",
+      "server_port": 50356,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "Xi7OoxXHdGSML35YG7Nj7aNTROGvk1nZf4DUHFe4d/M="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 51 - xiaohe",
+      "server": "129.146.75.221",
+      "server_port": 50356,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "ko88AO1Lj50PH3xGQ/SzJChWovcD99np3GwLcJwj/Eo="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇺🇸 美国 (United States) 52 - xiaohe",
+      "server": "129.146.78.85",
+      "server_port": 50356,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "sbJ5llt+YoGtqLI7RpEhaXIgLTN+tnwzrB3vSOAvs04="
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 53 - xiaohe",
+      "server": "195.211.98.43",
+      "server_port": 443,
+      "uuid": "1b4b11d5-4c2d-4533-9a55-636757cdee94",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA",
+          "short_id": "9c56fddf237e8eaf"
+        }
       }
     },
     {
@@ -644,7 +847,21 @@
         "🇺🇸 美国 (United States) 36 - xiaohe",
         "🇺🇸 美国 (United States) 37 - xiaohe",
         "🇺🇸 美国 (United States) 38 - xiaohe",
-        "🇺🇸 美国 (United States) 39 - xiaohe"
+        "🇺🇸 美国 (United States) 39 - xiaohe",
+        "🇺🇸 美国 (United States) 40 - xiaohe",
+        "🇺🇸 美国 (United States) 41 - xiaohe",
+        "🇺🇸 美国 (United States) 42 - xiaohe",
+        "🇺🇸 美国 (United States) 43 - xiaohe",
+        "🇺🇸 美国 (United States) 44 - xiaohe",
+        "🇺🇸 美国 (United States) 45 - xiaohe",
+        "🇺🇸 美国 (United States) 46 - xiaohe",
+        "🇺🇸 美国 (United States) 47 - xiaohe",
+        "🇺🇸 美国 (United States) 48 - xiaohe",
+        "🇺🇸 美国 (United States) 49 - xiaohe",
+        "🇺🇸 美国 (United States) 50 - xiaohe",
+        "🇺🇸 美国 (United States) 51 - xiaohe",
+        "🇺🇸 美国 (United States) 52 - xiaohe",
+        "🇺🇸 美国 (United States) 53 - xiaohe"
       ]
     },
     {
@@ -689,7 +906,21 @@
         "🇺🇸 美国 (United States) 36 - xiaohe",
         "🇺🇸 美国 (United States) 37 - xiaohe",
         "🇺🇸 美国 (United States) 38 - xiaohe",
-        "🇺🇸 美国 (United States) 39 - xiaohe"
+        "🇺🇸 美国 (United States) 39 - xiaohe",
+        "🇺🇸 美国 (United States) 40 - xiaohe",
+        "🇺🇸 美国 (United States) 41 - xiaohe",
+        "🇺🇸 美国 (United States) 42 - xiaohe",
+        "🇺🇸 美国 (United States) 43 - xiaohe",
+        "🇺🇸 美国 (United States) 44 - xiaohe",
+        "🇺🇸 美国 (United States) 45 - xiaohe",
+        "🇺🇸 美国 (United States) 46 - xiaohe",
+        "🇺🇸 美国 (United States) 47 - xiaohe",
+        "🇺🇸 美国 (United States) 48 - xiaohe",
+        "🇺🇸 美国 (United States) 49 - xiaohe",
+        "🇺🇸 美国 (United States) 50 - xiaohe",
+        "🇺🇸 美国 (United States) 51 - xiaohe",
+        "🇺🇸 美国 (United States) 52 - xiaohe",
+        "🇺🇸 美国 (United States) 53 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
