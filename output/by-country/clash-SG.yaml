@@ -5,14 +5,60 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  server: 13.212.83.43
+  server: 168.138.185.221
+  port: 56927
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: Yaz8LJBSJ12nY56yI3YkTXbN/C7BiGBRQurrUwREhvs=
+- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
+  server: 161.118.242.116
+  port: 56927
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: O8NAGBdB4ptCXObiSU8J/Gf38K8gnGNG6Bj6QU6/1WI=
+- name: 🇸🇬 新加坡 (Singapore) 03 - xiaohe
+  server: 43.160.220.86
   port: 443
   udp: true
-  type: hysteria2
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  sni: vpn-sg-001.fastervpn.world
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /buy/uploads?ed=2560
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇸🇬 新加坡 (Singapore) 04 - xiaohe
+  server: 23.249.18.144
+  port: 8581
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
   skip-cert-verify: true
-- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
+  network: ws
+  ws-opts:
+    path: /channels/act?ed=2560fp=chrome
+    headers:
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+  server: 161.118.206.93
+  port: 56927
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: sy97HcKMDTchOQqDSOIOklrpdXHtrJzbJ51u8/vCALs=
+- name: 🇸🇬 新加坡 (Singapore) 06 - xiaohe
   server: sg3.xiaoliyu.us
   port: 2052
   udp: true
@@ -20,6 +66,13 @@ proxies:
   password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
   sni: sg3.xiaoliyu.us
   skip-cert-verify: true
+- name: 🇸🇬 新加坡 (Singapore) 07 - xiaohe
+  server: 168.107.65.209
+  port: 56927
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: jzbveBTs+YuJotZVNhD1uM6abJDkpkxoV/ZPZTYTaSs=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -27,6 +80,11 @@ proxy-groups:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
   - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 03 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 06 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -34,5 +92,10 @@ proxy-groups:
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
   - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 03 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 06 - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 07 - xiaohe
 rules:
 - MATCH,PROXIES

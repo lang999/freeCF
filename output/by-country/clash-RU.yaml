@@ -5,22 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  server: msk.frkn.org
-  port: 443
-  udp: true
-  type: hysteria2
-  password: f317b5d6-d399-4d3d-a051-89d674ae953c
-  sni: msk.frkn.org
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  server: els.mangshe.xyz
-  port: 2056
-  udp: true
-  type: hysteria2
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  sni: els.mangshe.xyz
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
   server: 91.240.86.70
   port: 22443
   udp: true
@@ -28,24 +12,14 @@ proxies:
   password: 3f63c86c-ac4a-4900-85cf-4fedf93c2ca5
   sni: hy.quattro-tech.ru
   skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  server: ru.xiaoliyu.cyou
-  port: 4433
-  udp: true
-  type: hysteria2
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: ru.xiaoliyu.cyou
-  skip-cert-verify: true
-- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
-  server: 144.31.49.138
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+  server: msk.frkn.org
   port: 443
   udp: true
   type: hysteria2
-  password: cd74c0a406664a5bc0bac098220a2468
-  sni: ru1.sferavpn.pro
+  password: f317b5d6-d399-4d3d-a051-89d674ae953c
+  sni: msk.frkn.org
   skip-cert-verify: false
-  obfs: salamander
-  obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
 proxy-groups:
 - name: PROXIES
   type: select
@@ -53,9 +27,6 @@ proxy-groups:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -63,8 +34,5 @@ proxy-groups:
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
 rules:
 - MATCH,PROXIES

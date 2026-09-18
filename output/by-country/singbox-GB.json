@@ -4,32 +4,20 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
+      "type": "hysteria2",
       "tag": "🇬🇧 英国 (United Kingdom) 01 - xiaohe",
-      "server": "144.24.226.249",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "axZ54YHizH8C2/85gqPV+VCC6r0h+nWWGemeypymi2I="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
-      "server": "129.151.65.24",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "YtbZ5p/WBjlRfs2aQ1vr44sGpkdKyx5Xbdd+DKP7ke0="
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
-      "server": "144.24.231.175",
-      "server_port": 61312,
-      "method": "2022-blake3-chacha20-poly1305",
-      "password": "lvowWeKVBF+PManXpAfXqZ2beNoI3O13BDm6gzsH7Qk="
+      "server": "uk2.xiaoliyu.us",
+      "server_port": 2056,
+      "password": "b8949dae-cb53-4b5a-ad9c-50f58c4656fb",
+      "tls": {
+        "enabled": true,
+        "server_name": "uk2.xiaoliyu.us",
+        "insecure": true
+      }
     },
     {
       "type": "hysteria2",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
+      "tag": "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
       "server": "labs.frkn.org",
       "server_port": 443,
       "password": "3b8c82ed-fe66-472d-915e-034ccb57103f",
@@ -40,27 +28,12 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇬🇧 英国 (United Kingdom) 05 - xiaohe",
-      "server": "vpn-uk-002.fastervpn.world",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn-uk-002.fastervpn.world",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇬🇧 英国 (United Kingdom) 01 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 05 - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 02 - xiaohe"
       ]
     },
     {
@@ -68,10 +41,7 @@
       "tag": "auto",
       "outbounds": [
         "🇬🇧 英国 (United Kingdom) 01 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 05 - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

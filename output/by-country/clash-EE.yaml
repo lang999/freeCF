@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
-  server: 212.87.190.124
-  port: 99
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 6nQnSKAxCLJSZbg7KA94QA
-- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
   server: 217.60.182.79
   port: 443
   udp: true
@@ -19,7 +12,7 @@ proxies:
   password: sOiWCQ2AdIV0OWNuqQVyWp4JZnRxdyLROSjX
   sni: cabinet.wwwinternetvideo.click
   skip-cert-verify: false
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
+- name: 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
   server: ee1.sferavpn.pro
   port: 443
   udp: true
@@ -36,7 +29,6 @@ proxy-groups:
   - AUTO
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,6 +36,5 @@ proxy-groups:
   proxies:
   - 🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
-  - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
 rules:
 - MATCH,PROXIES

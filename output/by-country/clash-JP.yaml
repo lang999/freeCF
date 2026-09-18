@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 - xiaohe
-  server: 45.76.218.34
-  port: 39509
-  udp: true
-  type: hysteria2
-  password: ecc1f6d7-d378-40f1-a424-cfca853f0b2e
-  sni: lazeno.vip
-  skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 02 - xiaohe
   server: 203.137.165.164
   port: 57554
   udp: true
@@ -29,6 +21,21 @@ proxies:
       Host: cdn8848.776676.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇯🇵 日本 (Japan) 02 - xiaohe
+  server: 162.159.254.3
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  tls: true
+  servername: jp3.yohototo.top
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tyxyws
+    headers:
+      Host: jp3.yohototo.top
 - name: 🇯🇵 日本 (Japan) 03 - xiaohe
   server: jp1.xiaoliyu.us
   port: 27102
@@ -36,7 +43,7 @@ proxies:
   type: hysteria2
   password: b8949dae-cb53-4b5a-ad9c-50f58c4656fb
   sni: jp1.xiaoliyu.us
-  skip-cert-verify: false
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

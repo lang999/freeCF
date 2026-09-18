@@ -5,12 +5,42 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇷 法国 (France) 01 - xiaohe
+  server: 15.237.180.114
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 02 - xiaohe
+  server: 15.237.196.230
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇫🇷 法国 (France) 03 - xiaohe
+  server: 35.181.166.40
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 35.181.166.40
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 04 - xiaohe
+  server: vpn-fr-002.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇫🇷 法国 (France) 05 - xiaohe
   server: 62.210.7.139
   port: 60111
   udp: true
   type: hysteria2
   password: github.com/Alvin9999-newpac/fanqiang
-  sni: css.rbxcdn.com
+  sni: whatsapp.com
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -18,11 +48,19 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇫🇷 法国 (France) 01 - xiaohe
+  - 🇫🇷 法国 (France) 02 - xiaohe
+  - 🇫🇷 法国 (France) 03 - xiaohe
+  - 🇫🇷 法国 (France) 04 - xiaohe
+  - 🇫🇷 法国 (France) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇫🇷 法国 (France) 01 - xiaohe
+  - 🇫🇷 法国 (France) 02 - xiaohe
+  - 🇫🇷 法国 (France) 03 - xiaohe
+  - 🇫🇷 法国 (France) 04 - xiaohe
+  - 🇫🇷 法国 (France) 05 - xiaohe
 rules:
 - MATCH,PROXIES

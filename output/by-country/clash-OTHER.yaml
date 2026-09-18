@@ -5,8 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 162.159.48.32
-  port: 8080
+  server: 172.64.154.8
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🌐 其他地区 (Other) 02 - xiaohe
+  server: 188.114.97.6
+  port: 80
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
+- name: 🌐 其他地区 (Other) 03 - xiaohe
+  server: 172.64.52.6
+  port: 2095
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -23,11 +49,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🌐 其他地区 (Other) 02 - xiaohe
+  - 🌐 其他地区 (Other) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🌐 其他地区 (Other) 02 - xiaohe
+  - 🌐 其他地区 (Other) 03 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -28,25 +28,12 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇰🇷 韩国 (South Korea) 03 - xiaohe",
-      "server": "152.70.237.123",
-      "server_port": 2053,
-      "password": "maintell",
-      "tls": {
-        "enabled": true,
-        "server_name": "bing.com",
-        "insecure": true
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇰🇷 韩国 (South Korea) 01 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 02 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 03 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 02 - xiaohe"
       ]
     },
     {
@@ -54,8 +41,7 @@
       "tag": "auto",
       "outbounds": [
         "🇰🇷 韩国 (South Korea) 01 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 02 - xiaohe",
-        "🇰🇷 韩国 (South Korea) 03 - xiaohe"
+        "🇰🇷 韩国 (South Korea) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
