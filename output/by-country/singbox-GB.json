@@ -14,6 +14,14 @@
     {
       "type": "shadowsocks",
       "tag": "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
+      "server": "129.151.65.24",
+      "server_port": 61312,
+      "method": "2022-blake3-chacha20-poly1305",
+      "password": "YtbZ5p/WBjlRfs2aQ1vr44sGpkdKyx5Xbdd+DKP7ke0="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
       "server": "144.24.231.175",
       "server_port": 61312,
       "method": "2022-blake3-chacha20-poly1305",
@@ -21,20 +29,20 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
-      "server": "vpn-uk-002.fastervpn.world",
+      "tag": "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
+      "server": "labs.frkn.org",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "password": "3b8c82ed-fe66-472d-915e-034ccb57103f",
       "tls": {
         "enabled": true,
-        "server_name": "vpn-uk-002.fastervpn.world",
+        "server_name": "labs.frkn.org",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
-      "server": "13.40.130.216",
+      "tag": "🇬🇧 英国 (United Kingdom) 05 - xiaohe",
+      "server": "vpn-uk-002.fastervpn.world",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
@@ -51,7 +59,8 @@
         "🇬🇧 英国 (United Kingdom) 01 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 04 - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
+        "🇬🇧 英国 (United Kingdom) 05 - xiaohe"
       ]
     },
     {
@@ -61,7 +70,8 @@
         "🇬🇧 英国 (United Kingdom) 01 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 02 - xiaohe",
         "🇬🇧 英国 (United Kingdom) 03 - xiaohe",
-        "🇬🇧 英国 (United Kingdom) 04 - xiaohe"
+        "🇬🇧 英国 (United Kingdom) 04 - xiaohe",
+        "🇬🇧 英国 (United Kingdom) 05 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -12,22 +12,29 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: axZ54YHizH8C2/85gqPV+VCC6r0h+nWWGemeypymi2I=
 - name: 🇬🇧 英国 (United Kingdom) 02 - xiaohe
+  server: 129.151.65.24
+  port: 61312
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: YtbZ5p/WBjlRfs2aQ1vr44sGpkdKyx5Xbdd+DKP7ke0=
+- name: 🇬🇧 英国 (United Kingdom) 03 - xiaohe
   server: 144.24.231.175
   port: 61312
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: lvowWeKVBF+PManXpAfXqZ2beNoI3O13BDm6gzsH7Qk=
-- name: 🇬🇧 英国 (United Kingdom) 03 - xiaohe
-  server: vpn-uk-002.fastervpn.world
+- name: 🇬🇧 英国 (United Kingdom) 04 - xiaohe
+  server: labs.frkn.org
   port: 443
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-uk-002.fastervpn.world
+  password: 3b8c82ed-fe66-472d-915e-034ccb57103f
+  sni: labs.frkn.org
   skip-cert-verify: true
-- name: 🇬🇧 英国 (United Kingdom) 04 - xiaohe
-  server: 13.40.130.216
+- name: 🇬🇧 英国 (United Kingdom) 05 - xiaohe
+  server: vpn-uk-002.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
@@ -43,6 +50,7 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 03 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 04 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -52,5 +60,6 @@ proxy-groups:
   - 🇬🇧 英国 (United Kingdom) 02 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 03 - xiaohe
   - 🇬🇧 英国 (United Kingdom) 04 - xiaohe
+  - 🇬🇧 英国 (United Kingdom) 05 - xiaohe
 rules:
 - MATCH,PROXIES

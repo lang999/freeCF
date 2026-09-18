@@ -10,7 +10,7 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 3.36.93.74
+  sni: t.me
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 02 - xiaohe
   server: 150-230-252-217.liao.kdns.fr
@@ -21,24 +21,12 @@ proxies:
   sni: 150-230-252-217.liao.kdns.fr
   skip-cert-verify: true
 - name: 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  server: hg.zhujue.us
-  port: 11000
-  udp: true
-  type: vless
-  uuid: 0e46345c-f33b-4f9b-b8ec-90e7c986af7e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: sFRyah8EOSGcab8TfIdkq53c5HBSwAVfYQCyvZ0_BG4
-  servername: s0.awsstatic.com
-  client-fingerprint: chrome
-- name: 🇰🇷 韩国 (South Korea) 04 - xiaohe
-  server: 152.67.200.82
-  port: 50160
+  server: 152.70.237.123
+  port: 2053
   udp: true
   type: hysteria2
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  sni: 152-67-200-82.liao.kdns.fr
+  password: maintell
+  sni: bing.com
   skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
@@ -48,7 +36,6 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01 - xiaohe
   - 🇰🇷 韩国 (South Korea) 02 - xiaohe
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -57,6 +44,5 @@ proxy-groups:
   - 🇰🇷 韩国 (South Korea) 01 - xiaohe
   - 🇰🇷 韩国 (South Korea) 02 - xiaohe
   - 🇰🇷 韩国 (South Korea) 03 - xiaohe
-  - 🇰🇷 韩国 (South Korea) 04 - xiaohe
 rules:
 - MATCH,PROXIES
