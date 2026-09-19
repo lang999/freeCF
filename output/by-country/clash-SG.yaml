@@ -11,82 +11,17 @@ proxies:
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: mYD6SNVk6rYfSsNcRE54unnYKlp5hRZk+XTtDnjEzjY=
-- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  server: 172.104.57.243
-  port: 443
-  udp: true
-  type: vless
-  uuid: b847f2ff-091f-4396-a8d0-d2fe3bfaa0bf
-  tls: true
-  servername: zoom.us
-  skip-cert-verify: true
-- name: 🇸🇬 新加坡 (Singapore) 03 - xiaohe
-  server: 138.2.73.238
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: f87376e17da040ed04c9665ce8972930
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇸🇬 新加坡 (Singapore) 04 - xiaohe
-  server: 13.212.83.43
-  port: 443
-  udp: true
-  type: hysteria2
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  sni: vpn-sg-001.fastervpn.world
-  skip-cert-verify: true
-- name: 🇸🇬 新加坡 (Singapore) 05 - xiaohe
-  server: 109.66.88.158
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /details
-    headers:
-      Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 06 - xiaohe
-  server: 209.33.167.234
-  port: 443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 03 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 06 - xiaohe
 rules:
 - MATCH,PROXIES
