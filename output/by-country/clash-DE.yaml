@@ -5,49 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - xiaohe
-  server: 63.176.107.205
-  port: 443
+  server: 167.233.185.128
+  port: 80
   udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
+  type: vless
+  uuid: 381d2d00-e193-4163-a7d0-170b9144c34f
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇩🇪 德国 (Germany) 02 - xiaohe
-  server: 3.70.156.210
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 03 - xiaohe
-  server: 130.61.148.34
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: NiPxf0H2Yidm6y+KQxFBL9h6N0fIGwFOiUQPGC+3l+w=
-- name: 🇩🇪 德国 (Germany) 04 - xiaohe
-  server: 130.61.130.33
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: RpNOp0rdeUcXTBh/XgawUngLjpcB87tY8NaiVQl/dpo=
-- name: 🇩🇪 德国 (Germany) 05 - xiaohe
-  server: 130.61.130.160
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Agibj1Vmrbe4+wbHOjbYmeiae3Wi3nnIMa1mmgiKcu0=
-- name: 🇩🇪 德国 (Germany) 06 - xiaohe
-  server: de-node.rumedia-cdn.com
-  port: 25443
-  udp: true
-  type: hysteria2
-  password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
-  sni: cf6.rumedia-cdn.com
-  skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 07 - xiaohe
   server: 132.243.203.207
   port: 8443
   udp: true
@@ -63,14 +29,37 @@ proxies:
       Host: cdn8848.776676.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇩🇪 德国 (Germany) 08 - xiaohe
-  server: 130.61.50.75
-  port: 6443
+- name: 🇩🇪 德国 (Germany) 03 - xiaohe
+  server: de1.xiaoliyu.cyou
+  port: 4433
   udp: true
   type: hysteria2
-  password: zhangyang
-  sni: https%253a%252f%252fwww.calmloud.com
+  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+  sni: de1.xiaoliyu.cyou
   skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 04 - xiaohe
+  server: 162.55.242.208
+  port: 2053
+  udp: true
+  type: vless
+  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
+  tls: true
+  reality-opts:
+    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
+    short-id: 4d14da19b19cfc8c
+  servername: www.cloudflare.com
+  client-fingerprint: firefox
+- name: 🇩🇪 德国 (Germany) 05 - xiaohe
+  server: node8.quaxly.com
+  port: 25040
+  udp: true
+  type: trojan
+  password: Km/pIG4AGCjCOiGWj5FsWA==
+  sni: /gay-anal
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
 proxy-groups:
 - name: PROXIES
   type: select
@@ -81,9 +70,6 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - xiaohe
   - 🇩🇪 德国 (Germany) 04 - xiaohe
   - 🇩🇪 德国 (Germany) 05 - xiaohe
-  - 🇩🇪 德国 (Germany) 06 - xiaohe
-  - 🇩🇪 德国 (Germany) 07 - xiaohe
-  - 🇩🇪 德国 (Germany) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -94,8 +80,5 @@ proxy-groups:
   - 🇩🇪 德国 (Germany) 03 - xiaohe
   - 🇩🇪 德国 (Germany) 04 - xiaohe
   - 🇩🇪 德国 (Germany) 05 - xiaohe
-  - 🇩🇪 德国 (Germany) 06 - xiaohe
-  - 🇩🇪 德国 (Germany) 07 - xiaohe
-  - 🇩🇪 德国 (Germany) 08 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇳 印度 (India) 01 - xiaohe
-  server: 35.154.58.87
+  server: vpn-in-001.fastervpn.world
   port: 443
   udp: true
   type: hysteria2
