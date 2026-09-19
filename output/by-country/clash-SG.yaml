@@ -5,34 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 - xiaohe
-  server: 161.118.206.93
-  port: 56927
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: sy97HcKMDTchOQqDSOIOklrpdXHtrJzbJ51u8/vCALs=
-- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
-  server: 168.138.185.221
-  port: 56927
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Yaz8LJBSJ12nY56yI3YkTXbN/C7BiGBRQurrUwREhvs=
-- name: 🇸🇬 新加坡 (Singapore) 03 - xiaohe
-  server: 168.107.65.209
-  port: 56927
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: jzbveBTs+YuJotZVNhD1uM6abJDkpkxoV/ZPZTYTaSs=
-- name: 🇸🇬 新加坡 (Singapore) 04 - xiaohe
   server: 138.2.71.128
   port: 56927
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
   password: mYD6SNVk6rYfSsNcRE54unnYKlp5hRZk+XTtDnjEzjY=
-- name: 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+- name: 🇸🇬 新加坡 (Singapore) 02 - xiaohe
   server: 172.104.57.243
   port: 443
   udp: true
@@ -41,7 +20,15 @@ proxies:
   tls: true
   servername: zoom.us
   skip-cert-verify: true
-- name: 🇸🇬 新加坡 (Singapore) 06 - xiaohe
+- name: 🇸🇬 新加坡 (Singapore) 03 - xiaohe
+  server: 138.2.73.238
+  port: 50160
+  udp: true
+  type: hysteria2
+  password: f87376e17da040ed04c9665ce8972930
+  sni: www.bing.com
+  skip-cert-verify: true
+- name: 🇸🇬 新加坡 (Singapore) 04 - xiaohe
   server: 13.212.83.43
   port: 443
   udp: true
@@ -49,16 +36,8 @@ proxies:
   password: qQe1z5kU8kN6SlKnDt9Ru3Qp
   sni: vpn-sg-001.fastervpn.world
   skip-cert-verify: true
-- name: 🇸🇬 新加坡 (Singapore) 07 - xiaohe
-  server: 138.2.73.238
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: f87376e17da040ed04c9665ce8972930
-  sni: 138.2.73.238
-  skip-cert-verify: true
-- name: 🇸🇬 新加坡 (Singapore) 08 - xiaohe
-  server: 43.160.220.86
+- name: 🇸🇬 新加坡 (Singapore) 05 - xiaohe
+  server: 109.66.88.158
   port: 443
   udp: true
   type: vless
@@ -69,12 +48,10 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /buy/uploads?ed=2560
+    path: /details
     headers:
       Host: cdn8848.776676.xyz
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇸🇬 新加坡 (Singapore) 09 - xiaohe
+- name: 🇸🇬 新加坡 (Singapore) 06 - xiaohe
   server: 209.33.167.234
   port: 443
   udp: true
@@ -83,18 +60,12 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: cdn8848.776676.xyz
-- name: 🇸🇬 新加坡 (Singapore) 10 - xiaohe
-  server: 161.118.242.116
-  port: 56927
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: O8NAGBdB4ptCXObiSU8J/Gf38K8gnGNG6Bj6QU6/1WI=
 proxy-groups:
 - name: PROXIES
   type: select
@@ -106,10 +77,6 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
   - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
   - 🇸🇬 新加坡 (Singapore) 06 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 07 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 08 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 09 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -121,9 +88,5 @@ proxy-groups:
   - 🇸🇬 新加坡 (Singapore) 04 - xiaohe
   - 🇸🇬 新加坡 (Singapore) 05 - xiaohe
   - 🇸🇬 新加坡 (Singapore) 06 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 07 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 08 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 09 - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 10 - xiaohe
 rules:
 - MATCH,PROXIES

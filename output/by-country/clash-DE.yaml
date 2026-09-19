@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - xiaohe
-  server: 18.156.84.97
+  server: 3.71.182.230
   port: 443
   udp: true
   type: ss
@@ -19,71 +19,74 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: HCVjmCI84r15DaEC6s9RO3YZQEAC8l8VcQj541sTl7w=
 - name: 🇩🇪 德国 (Germany) 03 - xiaohe
-  server: 130.61.235.30
+  server: 130.61.224.175
   port: 59924
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: m/CrE+EuNElAAVP1IrhSyQYq0EUT+XiDckrdlPOdMFA=
+  password: SCbU86xLazclXP4Pnsmz/efv5JSMkayZ7LG3rxePKJY=
 - name: 🇩🇪 德国 (Germany) 04 - xiaohe
+  server: 130.61.179.28
+  port: 59924
+  udp: true
+  type: ss
+  cipher: 2022-blake3-chacha20-poly1305
+  password: XNRi9m8avIapydZV8GsJsnl049u4moNNBG90ENSviv4=
+- name: 🇩🇪 德国 (Germany) 05 - xiaohe
   server: 63.185.90.235
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇩🇪 德国 (Germany) 05 - xiaohe
-  server: 130.61.50.75
-  port: 6443
-  udp: true
-  type: hysteria2
-  password: zhangyang
-  sni: 130.61.50.75
-  skip-cert-verify: true
 - name: 🇩🇪 德国 (Germany) 06 - xiaohe
-  server: 130.61.82.183
+  server: 130.61.130.160
   port: 59924
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: rsZGSjFXUyi6kX8P6glg15+TdK0zdtKVBjkHYeZdJ58=
+  password: Agibj1Vmrbe4+wbHOjbYmeiae3Wi3nnIMa1mmgiKcu0=
 - name: 🇩🇪 德国 (Germany) 07 - xiaohe
-  server: 130.61.45.208
+  server: 130.61.176.44
   port: 59924
   udp: true
   type: ss
   cipher: 2022-blake3-chacha20-poly1305
-  password: 5rGNq8QrmZV0BGch+Rxs68Jr0LuVGuDhkVhLj4zEhR0=
+  password: AQqPf1u0AmCFWLNBxK7ve1ODd1cTFFCg+q5qsF3hwoM=
 - name: 🇩🇪 德国 (Germany) 08 - xiaohe
-  server: 130.61.43.8
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: frq0kd4mc0blKfmdiWiCosE/ahalb3nREwOnDCHUsZo=
-- name: 🇩🇪 德国 (Germany) 09 - xiaohe
-  server: 130.61.114.48
-  port: 59924
-  udp: true
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: FmxC4O0b9MskcU1X3oBo26HI+Kn5NDxSUAbvdF/tkV8=
-- name: 🇩🇪 德国 (Germany) 10 - xiaohe
   server: de-node.rumedia-cdn.com
   port: 25443
   udp: true
   type: hysteria2
   password: 29ffde49-e1d6-4dcd-a135-352920f9f0b8
   sni: cf6.rumedia-cdn.com
-  skip-cert-verify: false
-- name: 🇩🇪 德国 (Germany) 11 - xiaohe
-  server: de1.xiaoliyu.cyou
-  port: 4433
+  skip-cert-verify: true
+- name: 🇩🇪 德国 (Germany) 09 - xiaohe
+  server: de1.sferavpn.pro
+  port: 443
   udp: true
   type: hysteria2
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  sni: de1.xiaoliyu.cyou
+  password: cd74c0a406664a5bc0bac098220a2468
+  sni: de1.sferavpn.pro
   skip-cert-verify: false
+  obfs: salamander
+  obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
+- name: 🇩🇪 德国 (Germany) 10 - xiaohe
+  server: 84.23.54.203
+  port: 1935
+  udp: true
+  type: hysteria2
+  password: hysteria2_fastlane_cfm7kzssa:OHDpvCARUv5xvE07caQIrVo6IpqRkgkq
+  sni: ru2.h.smartaisupport.ru
+  skip-cert-verify: false
+- name: 🇩🇪 德国 (Germany) 11 - xiaohe
+  server: 130.61.50.75
+  port: 6443
+  udp: true
+  type: hysteria2
+  password: zhangyang
+  sni: https://www.calmloud.com
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select

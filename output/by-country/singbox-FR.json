@@ -6,62 +6,107 @@
     {
       "type": "shadowsocks",
       "tag": "🇫🇷 法国 (France) 01 - xiaohe",
-      "server": "13.37.239.112",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇷 法国 (France) 02 - xiaohe",
-      "server": "15.237.180.114",
+      "server": "13.36.169.164",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
     },
     {
       "type": "hysteria2",
-      "tag": "🇫🇷 法国 (France) 03 - xiaohe",
-      "server": "62.210.147.2",
-      "server_port": 43115,
-      "password": "github.com/Alvin9999-newpac/fanqiang",
+      "tag": "🇫🇷 法国 (France) 02 - xiaohe",
+      "server": "35.181.166.40",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "www.microsoft.com",
+        "server_name": "35.181.166.40",
         "insecure": true
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇫🇷 法国 (France) 03 - xiaohe",
+      "server": "188.114.96.19",
+      "server_port": 80,
+      "uuid": "479526cd-5011-43cf-a788-504da95e07c2",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "google.whatsapp.snapp.torob.basalam.fortresshost.ir."
+        }
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇫🇷 法国 (France) 04 - xiaohe",
-      "server": "62.210.7.139",
-      "server_port": 60111,
-      "password": "github.com/Alvin9999-newpac/fanqiang",
+      "server": "151.247.197.253",
+      "server_port": 36723,
+      "password": "Krab9Hyst2_Rk7pQ2xL",
       "tls": {
         "enabled": true,
-        "server_name": "62.210.7.139",
+        "server_name": "151.247.197.253",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇫🇷 法国 (France) 05 - xiaohe",
-      "server": "vpn-fr-002.fastervpn.world",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "server": "62.210.7.139",
+      "server_port": 60111,
+      "password": "github.com/Alvin9999-newpac/fanqiang",
       "tls": {
         "enabled": true,
-        "server_name": "127.0.0.1",
+        "server_name": "vk.com",
         "insecure": true
       }
     },
     {
-      "type": "shadowsocks",
+      "type": "vless",
       "tag": "🇫🇷 法国 (France) 06 - xiaohe",
-      "server": "13.36.169.164",
+      "server": "199.232.78.170",
       "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
+      "uuid": "XpnTeam-6",
+      "tls": {
+        "enabled": true,
+        "server_name": "ssl.fastly.com",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "Appxdn.global.ssl.fastly.net"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇷 法国 (France) 07 - xiaohe",
+      "server": "34.155.10.226",
+      "server_port": 443,
+      "uuid": "d619964d-26d6-452d-9860-6f058f03ba8e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "6tH_NDFcxWn60B3s-MgrkBTU2yUUBY42ZG1av50Ywhk",
+          "short_id": "ae682368818bd6c5"
+        }
+      }
     },
     {
       "type": "selector",
@@ -73,7 +118,8 @@
         "🇫🇷 法国 (France) 03 - xiaohe",
         "🇫🇷 法国 (France) 04 - xiaohe",
         "🇫🇷 法国 (France) 05 - xiaohe",
-        "🇫🇷 法国 (France) 06 - xiaohe"
+        "🇫🇷 法国 (France) 06 - xiaohe",
+        "🇫🇷 法国 (France) 07 - xiaohe"
       ]
     },
     {
@@ -85,7 +131,8 @@
         "🇫🇷 法国 (France) 03 - xiaohe",
         "🇫🇷 法国 (France) 04 - xiaohe",
         "🇫🇷 法国 (France) 05 - xiaohe",
-        "🇫🇷 法国 (France) 06 - xiaohe"
+        "🇫🇷 法国 (France) 06 - xiaohe",
+        "🇫🇷 法国 (France) 07 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
