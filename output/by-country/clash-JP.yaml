@@ -30,16 +30,15 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /bt/image/categories?ed=2560
+    path: /bt/image/categories?ed=2560fp=chrome
     headers:
       Host: cdn8848.776676.xyz
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇯🇵 日本 (Japan) 03 - xiaohe
-  server: 64.176.60.226
+  server: 45.8.173.217
   port: 443
   udp: true
   type: vless
@@ -47,10 +46,9 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /documents?ed=2560
+    path: /friend/buy?ed=2560fp=chrome
     headers:
       Host: cdn8848.776676.xyz
     max-early-data: 2560
@@ -64,34 +62,27 @@ proxies:
   tls: true
   servername: cdn8848.776676.xyz
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /
     headers:
       Host: cdn8848.776676.xyz
 - name: 🇯🇵 日本 (Japan) 05 - xiaohe
-  server: 172.67.156.147
+  server: 110.10.178.240
   port: 443
   udp: true
   type: vless
-  uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   tls: true
-  servername: jp3.yohototo.top
+  servername: cdn8848.776676.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /tyxyws
+    path: /albums?ed=2560fp=chrome
     headers:
-      Host: jp3.yohototo.top
-- name: 🇯🇵 日本 (Japan) 06 - xiaohe
-  server: msjp1.mangshe.xyz
-  port: 20561
-  udp: true
-  type: hysteria2
-  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
-  sni: www.microsoft.com
-  skip-cert-verify: true
+      Host: cdn8848.776676.xyz
+    max-early-data: 2560
+    early-data-header-name: Sec-WebSocket-Protocol
 proxy-groups:
 - name: PROXIES
   type: select
@@ -102,7 +93,6 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - xiaohe
   - 🇯🇵 日本 (Japan) 04 - xiaohe
   - 🇯🇵 日本 (Japan) 05 - xiaohe
-  - 🇯🇵 日本 (Japan) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -113,6 +103,5 @@ proxy-groups:
   - 🇯🇵 日本 (Japan) 03 - xiaohe
   - 🇯🇵 日本 (Japan) 04 - xiaohe
   - 🇯🇵 日本 (Japan) 05 - xiaohe
-  - 🇯🇵 日本 (Japan) 06 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -5,61 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇩🇪 德国 (Germany) 01 - xiaohe
-  server: 167.233.185.128
-  port: 80
-  udp: true
-  type: vless
-  uuid: 381d2d00-e193-4163-a7d0-170b9144c34f
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇩🇪 德国 (Germany) 02 - xiaohe
-  server: 132.243.203.207
-  port: 8443
-  udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /lives?ed=2560fp=chrome
-    headers:
-      Host: cdn8848.776676.xyz
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇩🇪 德国 (Germany) 03 - xiaohe
-  server: de1.xiaoliyu.cyou
-  port: 4433
+  server: 130.61.50.75
+  port: 6443
   udp: true
   type: hysteria2
-  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-  sni: de1.xiaoliyu.cyou
+  password: zhangyang
+  sni: https%252525253a%252525252f%252525252fwww.calmloud.com
   skip-cert-verify: true
-- name: 🇩🇪 德国 (Germany) 04 - xiaohe
-  server: 162.55.242.208
-  port: 2053
+- name: 🇩🇪 德国 (Germany) 02 - xiaohe
+  server: 46.8.210.152
+  port: 23443
   udp: true
-  type: vless
-  uuid: 659ffdfa-47d2-47d7-af40-5afe0907eead
-  tls: true
-  reality-opts:
-    public-key: jeS6Zu-p1Gf6GtraIAbpgQoSeT26Xq3GqgqVxccbVhY
-    short-id: 4d14da19b19cfc8c
-  servername: www.cloudflare.com
-  client-fingerprint: firefox
-- name: 🇩🇪 德国 (Germany) 05 - xiaohe
-  server: node8.quaxly.com
-  port: 25040
-  udp: true
-  type: trojan
-  password: Km/pIG4AGCjCOiGWj5FsWA==
-  sni: /gay-anal
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
+  type: hysteria2
+  password: 2a3b101d-d8f9-40e7-9373-b0ef487c0035
+  sni: disk.api-yandex.net
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,9 +27,6 @@ proxy-groups:
   - AUTO
   - 🇩🇪 德国 (Germany) 01 - xiaohe
   - 🇩🇪 德国 (Germany) 02 - xiaohe
-  - 🇩🇪 德国 (Germany) 03 - xiaohe
-  - 🇩🇪 德国 (Germany) 04 - xiaohe
-  - 🇩🇪 德国 (Germany) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -77,8 +34,5 @@ proxy-groups:
   proxies:
   - 🇩🇪 德国 (Germany) 01 - xiaohe
   - 🇩🇪 德国 (Germany) 02 - xiaohe
-  - 🇩🇪 德国 (Germany) 03 - xiaohe
-  - 🇩🇪 德国 (Germany) 04 - xiaohe
-  - 🇩🇪 德国 (Germany) 05 - xiaohe
 rules:
 - MATCH,PROXIES

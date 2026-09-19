@@ -5,43 +5,19 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇺🇸 美国 (United States) 01 - xiaohe
-  server: 162.159.0.169
-  port: 2086
+  server: 108.162.198.178
+  port: 80
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /
     headers:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
 - name: 🇺🇸 美国 (United States) 02 - xiaohe
-  server: 188.114.97.6
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 03 - xiaohe
-  server: 188.114.97.6
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 04 - xiaohe
-  server: 172.64.52.6
-  port: 2095
+  server: 172.64.42.85
+  port: 8880
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -52,7 +28,95 @@ proxies:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
+- name: 🇺🇸 美国 (United States) 03 - xiaohe
+  server: 172.64.42.85
+  port: 2086
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 04 - xiaohe
+  server: 104.18.42.54
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
+  tls: true
+  servername: vip.868068.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cffp=chrome
+    headers:
+      Host: vip.868068.xyz
 - name: 🇺🇸 美国 (United States) 05 - xiaohe
+  server: 45.131.5.35
+  port: 443
+  udp: true
+  type: vless
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  tls: true
+  servername: xi.tbv.ccwu.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: 🇺🇸 美国 (United States) 06 - xiaohe
+  server: 104.18.46.234
+  port: 8080
+  udp: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇺🇸 美国 (United States) 07 - xiaohe
+  server: 212.104.128.68
+  port: 443
+  udp: true
+  type: vless
+  uuid: b2593749-691c-428c-9481-14979cba3446
+  tls: true
+  servername: xi.tbv.ccwu.cc
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: xi.tbv.ccwu.cc
+- name: 🇺🇸 美国 (United States) 08 - xiaohe
+  server: 139.64.235.225
+  port: 443
+  udp: true
+  type: vless
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  tls: true
+  servername: nb.lovecf.ggff.net
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: 🇺🇸 美国 (United States) 09 - xiaohe
+  server: 155.248.209.237
+  port: 33333
+  udp: true
+  type: hysteria2
+  password: bce6c821-200d-421f-bf3d-7159e5246ea0
+  sni: 155.248.209.237
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 10 - xiaohe
   server: 139.64.235.23
   port: 443
   udp: true
@@ -66,93 +130,9 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: 🇺🇸 美国 (United States) 06 - xiaohe
-  server: 45.131.5.33
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 07 - xiaohe
-  server: 162.159.48.32
-  port: 2052
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 08 - xiaohe
-  server: hy2.123266.xyz
-  port: 33333
-  udp: true
-  type: hysteria2
-  password: bce6c821-200d-421f-bf3d-7159e5246ea0
-  sni: hy2.123266.xyz
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 09 - xiaohe
-  server: 212.104.128.27
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 10 - xiaohe
-  server: 45.131.6.249
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
 - name: 🇺🇸 美国 (United States) 11 - xiaohe
-  server: 195.26.229.222
+  server: 104.18.26.90
   port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 12 - xiaohe
-  server: hy2.561891.xyz
-  port: 44356
-  udp: true
-  type: hysteria2
-  password: dongtaiwang.com
-  sni: hy2.561891.xyz
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 13 - xiaohe
-  server: 104.18.42.54
-  port: 2096
   udp: true
   type: vless
   uuid: 8102891d-7b37-4dc5-8261-9474b59b5c63
@@ -164,8 +144,16 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: vip.868068.xyz
-- name: 🇺🇸 美国 (United States) 14 - xiaohe
-  server: 195.85.23.219
+- name: 🇺🇸 美国 (United States) 12 - xiaohe
+  server: 142.249.37.90
+  port: 44356
+  udp: true
+  type: hysteria2
+  password: dongtaiwang.com
+  sni: hy2.561891.xyz
+  skip-cert-verify: false
+- name: 🇺🇸 美国 (United States) 13 - xiaohe
+  server: 139.64.235.36
   port: 443
   udp: true
   type: vless
@@ -173,22 +161,15 @@ proxies:
   tls: true
   servername: nb.lovecf.ggff.net
   skip-cert-verify: false
+  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: nb.lovecf.ggff.net
-- name: 🇺🇸 美国 (United States) 15 - xiaohe
-  server: 163.192.14.135
-  port: 50160
-  udp: true
-  type: hysteria2
-  password: 099830134df5ac3a04a4b21d39b8c395
-  sni: google.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 16 - xiaohe
-  server: 172.64.154.8
-  port: 8880
+- name: 🇺🇸 美国 (United States) 14 - xiaohe
+  server: 172.64.42.85
+  port: 80
   udp: true
   type: vless
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
@@ -199,21 +180,8 @@ proxies:
       Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
     max-early-data: 2560
     early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 17 - xiaohe
-  server: dzen-us-2.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: bcb5a897-8cc4-4e21-ad96-c82fb3a9d72a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg
-    short-id: 0a6ba2716a409da6
-  servername: dzen-us-2.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 18 - xiaohe
-  server: 104.21.34.106
+- name: 🇺🇸 美国 (United States) 15 - xiaohe
+  server: 172.64.145.202
   port: 443
   udp: true
   type: vless
@@ -221,38 +189,72 @@ proxies:
   tls: true
   servername: xi.tbv.ccwu.cc
   skip-cert-verify: false
-  client-fingerprint: chrome
   network: ws
   ws-opts:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 19 - xiaohe
-  server: 104.21.34.106
+- name: 🇺🇸 美国 (United States) 16 - xiaohe
+  server: us4.xiaoliyu.cyou
+  port: 4433
+  udp: true
+  type: hysteria2
+  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
+  sni: 127.0.0.1
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 17 - xiaohe
+  server: servconfmmmddd.ir
   port: 443
   udp: true
   type: vless
-  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  uuid: 1cae21e8-9293-4cfe-bbe3-ee645e353e89
   tls: true
-  servername: nb.lovecf.ggff.net
+  servername: servconfmmmddd.ir
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /proxyip=us.xiabibi.cf
+    path: /vl-ws
     headers:
-      Host: nb.lovecf.ggff.net
-- name: 🇺🇸 美国 (United States) 20 - xiaohe
-  server: 108.162.198.178
+      Host: servconfmmmddd.ir
+- name: 🇺🇸 美国 (United States) 18 - xiaohe
+  server: 34.85.179.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8ea1a178-2719-47b7-99d0-33d8dc361ba3
+  tls: true
+  reality-opts:
+    public-key: cTwhlN0bIkprnzvGCMPmsdxk8XkqUz3LcCrS0FKnbVI
+    short-id: c08efcd72d7e8389
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇺🇸 美国 (United States) 19 - xiaohe
+  server: developers.cloudflare.com
   port: 2095
   udp: true
   type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: free-claude-api.asshole.us.ci
+- name: 🇺🇸 美国 (United States) 20 - xiaohe
+  server: www.epicgames.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  tls: true
+  servername: cnmfangbinxingnmsl.asshole.us.ci
+  skip-cert-verify: false
+  client-fingerprint: ios
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cnmfangbinxingnmsl.asshole.us.ci
 - name: 🇺🇸 美国 (United States) 21 - xiaohe
   server: www.shopify.com
   port: 443
@@ -270,140 +272,36 @@ proxies:
     headers:
       Host: guanwang.awsno.com
 - name: 🇺🇸 美国 (United States) 22 - xiaohe
+  server: vpn-us-004.fastervpn.world
+  port: 443
+  udp: true
+  type: hysteria2
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  sni: vpn-us-004.fastervpn.world
+  skip-cert-verify: true
+- name: 🇺🇸 美国 (United States) 23 - xiaohe
+  server: 139.64.235.77
+  port: 443
+  udp: true
+  type: vless
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  tls: true
+  servername: nb.lovecf.ggff.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+- name: 🇺🇸 美国 (United States) 24 - xiaohe
   server: 18.188.105.92
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇺🇸 美国 (United States) 23 - xiaohe
-  server: 31.43.179.20
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 24 - xiaohe
-  server: 104.18.39.218
-  port: 2086
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇺🇸 美国 (United States) 25 - xiaohe
-  server: 402cf505-tly2o0-tn3jhp-1qthu.los.hyhuawei.com
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 8fa4bea0-8703-11ef-83cc-f23c913c8d2b
-  sni: 402cf505-tly2o0-tn3jhp-1qthu.los.hyhuawei.com
-  skip-cert-verify: false
-- name: 🇺🇸 美国 (United States) 26 - xiaohe
-  server: 162.159.0.53
-  port: 8080
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-    max-early-data: 2560
-    early-data-header-name: Sec-WebSocket-Protocol
-- name: 🇺🇸 美国 (United States) 27 - xiaohe
-  server: us4.xiaoliyu.cyou
-  port: 4433
-  udp: true
-  type: hysteria2
-  password: 6a3fe9d0-0d68-4f29-ae99-5771d4217a45
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 28 - xiaohe
-  server: 108.162.198.178
-  port: 2082
-  udp: true
-  type: vless
-  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
-- name: 🇺🇸 美国 (United States) 29 - xiaohe
-  server: 172.64.153.88
-  port: 443
-  udp: true
-  type: vless
-  uuid: b2593749-691c-428c-9481-14979cba3446
-  tls: true
-  servername: xi.tbv.ccwu.cc
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /proxyip=us.xiabibi.cf
-    headers:
-      Host: xi.tbv.ccwu.cc
-- name: 🇺🇸 美国 (United States) 30 - xiaohe
-  server: 3.142.197.111
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇺🇸 美国 (United States) 31 - xiaohe
-  server: developers.cloudflare.com
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: free-claude-api.asshole.us.ci
-- name: 🇺🇸 美国 (United States) 32 - xiaohe
-  server: vpn-us-006.fastervpn.world
-  port: 443
-  udp: true
-  type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-us-006.fastervpn.world
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 33 - xiaohe
-  server: de.1.23.h2corp.org
-  port: 443
-  udp: true
-  type: hysteria2
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  sni: germany3.h2corp.local
-  skip-cert-verify: true
-- name: 🇺🇸 美国 (United States) 34 - xiaohe
-  server: 34.19.91.203
-  port: 443
-  udp: true
-  type: vless
-  uuid: 9d0395c0-016f-453e-b0be-fc66f1ee1d80
-  tls: true
-  reality-opts:
-    public-key: aGm3egxU7SVqVw-oxqXbJ0u4ctldnmTjwaDh4Mao2EE
-    short-id: bd4aa541e5306ba2
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇺🇸 美国 (United States) 35 - xiaohe
   server: 2.27.249.79
   port: 443
   udp: true
@@ -413,6 +311,14 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
+- name: 🇺🇸 美国 (United States) 26 - xiaohe
+  server: gta.internet-card.sbs
+  port: 443
+  udp: true
+  type: hysteria2
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: gta.internet-card.sbs
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -444,15 +350,6 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 24 - xiaohe
   - 🇺🇸 美国 (United States) 25 - xiaohe
   - 🇺🇸 美国 (United States) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇺🇸 美国 (United States) 28 - xiaohe
-  - 🇺🇸 美国 (United States) 29 - xiaohe
-  - 🇺🇸 美国 (United States) 30 - xiaohe
-  - 🇺🇸 美国 (United States) 31 - xiaohe
-  - 🇺🇸 美国 (United States) 32 - xiaohe
-  - 🇺🇸 美国 (United States) 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
-  - 🇺🇸 美国 (United States) 35 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -484,14 +381,5 @@ proxy-groups:
   - 🇺🇸 美国 (United States) 24 - xiaohe
   - 🇺🇸 美国 (United States) 25 - xiaohe
   - 🇺🇸 美国 (United States) 26 - xiaohe
-  - 🇺🇸 美国 (United States) 27 - xiaohe
-  - 🇺🇸 美国 (United States) 28 - xiaohe
-  - 🇺🇸 美国 (United States) 29 - xiaohe
-  - 🇺🇸 美国 (United States) 30 - xiaohe
-  - 🇺🇸 美国 (United States) 31 - xiaohe
-  - 🇺🇸 美国 (United States) 32 - xiaohe
-  - 🇺🇸 美国 (United States) 33 - xiaohe
-  - 🇺🇸 美国 (United States) 34 - xiaohe
-  - 🇺🇸 美国 (United States) 35 - xiaohe
 rules:
 - MATCH,PROXIES
