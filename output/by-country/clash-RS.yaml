@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
-  server: 176.108.246.58
+  server: 213.171.25.29
   port: 9889
   udp: true
   type: vless
@@ -13,8 +13,9 @@ proxies:
   tls: true
   reality-opts:
     public-key: ycPIUcY6ci2yi7YA_OHc20e4gzxEdJTqpmeShxSuHRU
+    short-id: aabb
   servername: dl.google.com
-  client-fingerprint: qq
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpc-tunnel
