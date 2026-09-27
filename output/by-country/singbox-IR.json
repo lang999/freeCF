@@ -15,7 +15,7 @@
         "server_name": "table.vkroom-it-service.xyz",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,

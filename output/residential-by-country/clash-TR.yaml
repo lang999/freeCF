@@ -5,16 +5,11 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe
-  server: 151.101.65.57
-  port: 80
+  server: test.keoplentuio.xyz
+  port: 2053
   udp: true
   type: vless
-  uuid: 66fc196d-3623-4ba5-92ae-101a069af5b1
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: simorghtrr.global.ssl.fastly.net
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 proxy-groups:
 - name: PROXIES
   type: select
