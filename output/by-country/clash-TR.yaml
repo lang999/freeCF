@@ -5,41 +5,39 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  server: 185.87.24.168
-  port: 2085
+  server: 93.190.9.60
+  port: 3090
   udp: true
   type: vless
-  uuid: ea53420b-e8ad-4e9d-ab21-ddd546231e92
+  uuid: cbbc93ef-6d35-463a-a856-64265c42e66d
   network: grpc
   grpc-opts:
     grpc-service-name: vless
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  server: 93.190.9.3
-  port: 3090
+  server: 202.133.90.105
+  port: 57680
   udp: true
   type: vless
-  uuid: ea53420b-e8ad-4e9d-ab21-ddd546231e92
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 9807575f-5b45-4c68-a39d-95fa381e05e1
 - name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  server: 93.190.8.22
-  port: 3090
+  server: 85.192.48.142
+  port: 443
   udp: true
   type: vless
-  uuid: dca830a2-3c69-4e1b-bc0b-a2ea22af53ba
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: adc11f30-e4cb-4985-bf5e-f9ded69c019f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: fNfokzklCF4l_c8k8PciOCjm5ecNoF_sNLjEtaO-xzI
+    short-id: db04ce8bdb8900f1
+  servername: nvidia.com
+  client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
-  server: 93.190.9.26
-  port: 3090
+  server: 145.239.30.17
+  port: 2053
   udp: true
   type: vless
-  uuid: ea53420b-e8ad-4e9d-ab21-ddd546231e92
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 - name: 🇹🇷 土耳其 (Turkey) 05 - xiaohe
   server: 78.135.73.47
   port: 443
@@ -64,7 +62,7 @@ proxies:
     public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
