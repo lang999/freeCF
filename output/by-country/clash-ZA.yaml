@@ -12,30 +12,34 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: tfAcRikawhNoZAhu
 - name: 🇿🇦 南非 (South Africa) 02 - xiaohe
-  server: 102.133.165.160
-  port: 16233
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
-- name: 🇿🇦 南非 (South Africa) 03 - xiaohe
   server: 102.37.156.224
   port: 443
   udp: true
   type: ss
   cipher: chacha20-ietf-poly1305
   password: aduB9HGxQHjA2SBMRjkHX6
-- name: 🇿🇦 南非 (South Africa) 04 - xiaohe
-  server: 139.84.245.154
+- name: 🇿🇦 南非 (South Africa) 03 - xiaohe
+  server: 139.84.250.125
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform108
+    path: /platform106
     headers:
-      Host: platform108.halalkhor.info
+      Host: platform106.halalkhor.info
+- name: 🇿🇦 南非 (South Africa) 04 - xiaohe
+  server: 139.84.250.128
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform109
+    headers:
+      Host: platform109.halalkhor.info
 - name: 🇿🇦 南非 (South Africa) 05 - xiaohe
   server: 139.84.243.189
   port: 80
@@ -48,18 +52,18 @@ proxies:
     headers:
       Host: platform101.halalkhor.info
 - name: 🇿🇦 南非 (South Africa) 06 - xiaohe
-  server: 139.84.245.78
+  server: 139.84.245.154
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform107
+    path: /platform108
     headers:
-      Host: platform107.halalkhor.info
+      Host: platform108.halalkhor.info
 - name: 🇿🇦 南非 (South Africa) 07 - xiaohe
-  server: 139.84.234.100
+  server: platform118.golnamakcert.top
   port: 80
   udp: true
   type: vless
@@ -70,18 +74,18 @@ proxies:
     headers:
       Host: platform118.halalkhor.info
 - name: 🇿🇦 南非 (South Africa) 08 - xiaohe
-  server: 139.84.228.106
+  server: platform113.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform117
+    path: /platform113
     headers:
-      Host: platform117.halalkhor.info
+      Host: platform113.halalkhor.info
 - name: 🇿🇦 南非 (South Africa) 09 - xiaohe
-  server: 139.84.249.25
+  server: platform102.golnamakcert.top
   port: 80
   udp: true
   type: vless
@@ -92,18 +96,27 @@ proxies:
     headers:
       Host: platform102.halalkhor.info
 - name: 🇿🇦 南非 (South Africa) 10 - xiaohe
-  server: 139.84.250.128
+  server: platform107.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform109
-    headers:
-      Host: platform109.halalkhor.info
+    path: /platform107
 - name: 🇿🇦 南非 (South Africa) 11 - xiaohe
-  server: 139.84.246.240
+  server: platform117.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform117
+    headers:
+      Host: platform117.halalkhor.info
+- name: 🇿🇦 南非 (South Africa) 12 - xiaohe
+  server: platform103.golnamakcert.top
   port: 80
   udp: true
   type: vless
@@ -113,29 +126,7 @@ proxies:
     path: /platform103
     headers:
       Host: platform103.halalkhor.info
-- name: 🇿🇦 南非 (South Africa) 12 - xiaohe
-  server: 139.84.250.125
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform106
-    headers:
-      Host: platform106.halalkhor.info
 - name: 🇿🇦 南非 (South Africa) 13 - xiaohe
-  server: 139.84.246.73
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform113
-    headers:
-      Host: platform113.halalkhor.info
-- name: 🇿🇦 南非 (South Africa) 14 - xiaohe
   server: 139.84.247.122
   port: 80
   udp: true
@@ -164,7 +155,6 @@ proxy-groups:
   - 🇿🇦 南非 (South Africa) 11 - xiaohe
   - 🇿🇦 南非 (South Africa) 12 - xiaohe
   - 🇿🇦 南非 (South Africa) 13 - xiaohe
-  - 🇿🇦 南非 (South Africa) 14 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -183,6 +173,5 @@ proxy-groups:
   - 🇿🇦 南非 (South Africa) 11 - xiaohe
   - 🇿🇦 南非 (South Africa) 12 - xiaohe
   - 🇿🇦 南非 (South Africa) 13 - xiaohe
-  - 🇿🇦 南非 (South Africa) 14 - xiaohe
 rules:
 - MATCH,PROXIES
