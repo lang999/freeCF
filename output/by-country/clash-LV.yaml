@@ -6,53 +6,53 @@ log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe
   server: 185.135.86.175
-  port: 9017
+  port: 9036
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: HAVAdE3nXhqA5nHp
+  password: hbtvgUz5uNYyB3Rf
 - name: 🇱🇻 拉脱维亚 (Latvia) 02 - xiaohe
   server: 185.135.86.175
-  port: 9068
+  port: 9082
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: mwgRg9hRq3b4Qnwb
+  password: 45xgMgm386pjWjTx
 - name: 🇱🇻 拉脱维亚 (Latvia) 03 - xiaohe
-  server: 185.135.86.175
-  port: 9034
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: Yg4MbdXFQ9HFFVY6
-- name: 🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe
-  server: 185.135.86.175
-  port: 9007
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: kSPmvwdFzGMMW5pY
-- name: 🇱🇻 拉脱维亚 (Latvia) 05 - xiaohe
-  server: 185.135.86.175
-  port: 9033
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: UTJA57ypk2XKQpnm
-- name: 🇱🇻 拉脱维亚 (Latvia) 06 - xiaohe
   server: 185.135.86.175
   port: 9086
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: 37Z4TFCYhfxcpc9Q
-- name: 🇱🇻 拉脱维亚 (Latvia) 07 - xiaohe
+- name: 🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe
   server: 185.135.86.175
-  port: 9036
+  port: 9017
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: hbtvgUz5uNYyB3Rf
+  password: HAVAdE3nXhqA5nHp
+- name: 🇱🇻 拉脱维亚 (Latvia) 05 - xiaohe
+  server: 185.135.86.175
+  port: 9007
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: kSPmvwdFzGMMW5pY
+- name: 🇱🇻 拉脱维亚 (Latvia) 06 - xiaohe
+  server: 185.135.86.175
+  port: 9034
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: Yg4MbdXFQ9HFFVY6
+- name: 🇱🇻 拉脱维亚 (Latvia) 07 - xiaohe
+  server: 185.135.86.175
+  port: 9068
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: mwgRg9hRq3b4Qnwb
 - name: 🇱🇻 拉脱维亚 (Latvia) 08 - xiaohe
   server: 185.135.86.175
   port: 9094
@@ -61,6 +61,38 @@ proxies:
   cipher: aes-256-cfb
   password: rpgbNnU9rDDU4aWZ
 - name: 🇱🇻 拉脱维亚 (Latvia) 09 - xiaohe
+  server: 185.135.86.175
+  port: 9033
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: UTJA57ypk2XKQpnm
+- name: 🇱🇻 拉脱维亚 (Latvia) 10 - xiaohe
+  server: 104.252.19.114
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 40cba749-bca9-4089-9c02-84a357244ce0
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI
+  servername: omvpn.info
+  client-fingerprint: chrome
+- name: 🇱🇻 拉脱维亚 (Latvia) 11 - xiaohe
+  server: 195.123.213.28
+  port: 443
+  udp: true
+  type: vless
+  uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
+    short-id: 5c256336e3b673fa
+  servername: www.cloudflare.com
+  client-fingerprint: ios
+- name: 🇱🇻 拉脱维亚 (Latvia) 12 - xiaohe
   server: 138.124.180.137
   port: 443
   udp: true
@@ -73,39 +105,15 @@ proxies:
     short-id: 33acba1b
   servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 10 - xiaohe
-  server: 185.135.86.175
-  port: 9082
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 45xgMgm386pjWjTx
-- name: 🇱🇻 拉脱维亚 (Latvia) 11 - xiaohe
-  server: 104.252.19.114
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 40cba749-bca9-4089-9c02-84a357244ce0
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cD8mVX41lqyVGCuPz0-tQWcNqkMxiPZxU7JJsyyNAEI
-  servername: omvpn.info
-  client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 12 - xiaohe
-  server: 195.123.213.28
-  port: 443
-  udp: true
-  type: vless
-  uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
-    short-id: 5c256336e3b673fa
-  servername: www.cloudflare.com
-  client-fingerprint: qq
 - name: 🇱🇻 拉脱维亚 (Latvia) 13 - xiaohe
+  server: 212.192.14.212
+  port: 8113
+  udp: true
+  type: hysteria2
+  password: ODM2MzExOTcyMCwxNzkwNTMyNzE0ksak7YOGMD
+  sni: lat1.lumenvpn.tech
+  skip-cert-verify: false
+- name: 🇱🇻 拉脱维亚 (Latvia) 14 - xiaohe
   server: 193.163.203.199
   port: 443
   udp: true
@@ -117,19 +125,6 @@ proxies:
     public-key: xa2v36oJSdYGM1SSiMYyehw9RTdlBHOLcE5-YOK6unE
     short-id: 3c7ab85b281ecc8f
   servername: x6.megabitvpn.org
-  client-fingerprint: chrome
-- name: 🇱🇻 拉脱维亚 (Latvia) 14 - xiaohe
-  server: 31.57.28.147
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: d7yg69dK4DkaV1EPpQcgd4GBncMN9u1o1Nk9u-i7wGc
-    short-id: 7a18a196e730e1d5
-  servername: download-cdn.jetbrains.com
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES

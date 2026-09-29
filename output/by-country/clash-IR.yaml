@@ -16,7 +16,7 @@ proxies:
     public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M
     short-id: f3a9c21e8b6d4571
   servername: table.vkroom-it-service.xyz
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
