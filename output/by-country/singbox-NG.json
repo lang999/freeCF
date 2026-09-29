@@ -4,14 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
-      "server": "153.76.185.100",
-      "server_port": 3090,
-      "uuid": "e8b3f952-cd1b-4881-872e-b8d03399a6df",
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless"
+      "type": "trojan",
+      "tag": "🇳🇬 尼日利亚 (Nigeria) 01 - xiaohe",
+      "server": "103.97.91.17",
+      "server_port": 443,
+      "password": "600421cf-11d7-429f-a65b-c30397f1bc03",
+      "tls": {
+        "enabled": true,
+        "server_name": "la.freeguard.org",
+        "insecure": false
       }
     },
     {
@@ -19,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - xiaohe"
+        "🇳🇬 尼日利亚 (Nigeria) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - xiaohe"
+        "🇳🇬 尼日利亚 (Nigeria) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
