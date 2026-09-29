@@ -5,45 +5,25 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: 63.141.128.22
-  port: 443
+  server: 153.76.185.100
+  port: 3090
   udp: true
   type: vless
-  uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4
-  tls: true
-  servername: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
-    headers:
-      Host: MiSty-tooth-78cA.FoboGAH414-e7B.WoRKERs.DEv
-- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
-  server: 95.85.241.239
-  port: 443
-  udp: true
-  type: vless
-  uuid: 78571e63-1236-4c60-862a-70b7624dfa36
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: nf9hAhB_OqveSsgdqqx7EW0FSoT4XNN_EzfD8lXVDVo
-    short-id: a1b2c3d4e5f6
-  servername: originsw239.aktanow.shop
-  client-fingerprint: firefox
+  uuid: e8b3f952-cd1b-4881-872e-b8d03399a6df
+  network: grpc
+  grpc-opts:
+    grpc-service-name: vless
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
-  - 🇨🇿 捷克 (Czech) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
-  - 🇨🇿 捷克 (Czech) 02 - xiaohe
 rules:
 - MATCH,PROXIES

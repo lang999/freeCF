@@ -17,34 +17,17 @@ proxies:
     short-id: 0eec442e7b34d2f2
   servername: www.tesla.com
   client-fingerprint: chrome
-- name: 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  server: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
-  port: 443
-  udp: true
-  type: vless
-  uuid: af0db32b-2cb0-48c7-b04e-96003f8c2369
-  tls: true
-  servername: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /vl/ZONyHuyg0cpDAFQTzm3u?ed=2560
-    headers:
-      Host: dl2uf-ivdezilz3e86rk18.hhvt37tjm2xbosql5hxogn-y.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  - 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
 rules:
 - MATCH,PROXIES
