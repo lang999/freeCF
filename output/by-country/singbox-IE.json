@@ -6,6 +6,27 @@
     {
       "type": "vless",
       "tag": "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
+      "server": "193.24.234.125",
+      "server_port": 443,
+      "uuid": "06d44c57-8e1a-41f4-b9c4-65d35869e078",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.code-sandbox.blog",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Y0OENG_faNE37KNgR5p6fnuIXmoES6sVuCFnWsbUzUw",
+          "short_id": "d1d479faa1c1d92f"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
       "server": "3.9.135.156",
       "server_port": 51847,
       "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
@@ -15,7 +36,7 @@
         "server_name": "www.tesla.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -29,14 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe"
+        "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe"
+        "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

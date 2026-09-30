@@ -5,28 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - xiaohe
+  server: 51.20.86.152
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
   server: 70.34.212.124
   port: 8388
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: AxIYWtskJWIIaefW
-- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  server: 51.20.143.248
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
-  server: 51.20.122.188
+  server: 51.20.96.231
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
-  server: 51.20.86.152
+  server: 13.60.213.145
   port: 443
   udp: true
   type: ss
@@ -40,33 +40,40 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 06 - xiaohe
-  server: 13.62.228.76
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 07 - xiaohe
   server: 13.48.104.64
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 08 - xiaohe
-  server: 79.141.174.147
-  port: 33743
+- name: 🇸🇪 瑞典 (Sweden) 07 - xiaohe
+  server: surstreming.vvzzkontaktezzvv.garden
+  port: 443
   udp: true
   type: vless
-  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
+  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
-  servername: www.google.com
+    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
+    short-id: fb442438e2223836
+  servername: surstreming.vvzzkontaktezzvv.garden
+  client-fingerprint: random
+- name: 🇸🇪 瑞典 (Sweden) 08 - xiaohe
+  server: 2.27.14.218
+  port: 2096
+  udp: true
+  type: vless
+  uuid: 11d826ce-d6e5-4154-8658-6829bb17dca2
+  tls: true
+  servername: stf7697.rumedia-cdn.com
+  skip-cert-verify: false
   client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: TunService
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: stf7697.rumedia-cdn.com
 - name: 🇸🇪 瑞典 (Sweden) 09 - xiaohe
   server: 62.60.159.81
   port: 2053
@@ -78,51 +85,33 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
 - name: 🇸🇪 瑞典 (Sweden) 10 - xiaohe
-  server: 5.157.10.148
-  port: 443
+  server: 193.42.39.10
+  port: 33743
   udp: true
   type: vless
-  uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b
-  flow: xtls-rprx-vision
+  uuid: b3a11068-1a7e-4643-85de-7c82cce46943
   tls: true
   reality-opts:
-    public-key: x6p656szvu_3CKLsJ4NtkooRvdTVGx7IoPca_p58_jA
-    short-id: fb442438e2223836
-  servername: surstreming.vvzzkontaktezzvv.garden
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 11 - xiaohe
-  server: sw-01.vacvps.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: 84a3061b-3573-4a3c-a631-f26c31209268
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: bDAry75taTMaPJII9vRrJuXAjQglTJxCOVWraQ5BozY
-  servername: sw-01.vacvps.com
-  client-fingerprint: firefox
-- name: 🇸🇪 瑞典 (Sweden) 12 - xiaohe
-  server: 176.109.106.182
-  port: 9881
-  udp: true
-  type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  reality-opts:
-    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
-  servername: dl.google.com
-  client-fingerprint: chrome
+    public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
+  servername: www.google.com
+  client-fingerprint: ios
   network: grpc
   grpc-opts:
-    grpc-service-name: grpc-tunnel
-- name: 🇸🇪 瑞典 (Sweden) 13 - xiaohe
-  server: 51.20.96.231
+    grpc-service-name: TunService
+- name: 🇸🇪 瑞典 (Sweden) 11 - xiaohe
+  server: 51.20.122.188
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 12 - xiaohe
+  server: 51.20.143.248
   port: 443
   udp: true
   type: ss
@@ -145,7 +134,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 10 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 11 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 12 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 13 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -163,6 +151,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 10 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 11 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 12 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 13 - xiaohe
 rules:
 - MATCH,PROXIES
