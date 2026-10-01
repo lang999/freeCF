@@ -18,43 +18,17 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 127.0.0.1
+  sni: 160.187.100.109
   skip-cert-verify: true
 - name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
-  server: tw3.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: f1d601f2-cc29-4fc2-bafc-7ac833af466a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: JE82iOR_U_H7ffxJ5yfoxXeRkMlE-aVu1wxR7n6jrVM
-    short-id: 473277e2
-  servername: dlcdnets.asus.com
-  client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
   server: 103.115.109.49
   port: 443
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: 103.115.109.49
+  sni: https://t.me/wangcai2
   skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
-  server: tw4.miyazono-kaori.com
-  port: 443
-  udp: true
-  type: vless
-  uuid: f1d601f2-cc29-4fc2-bafc-7ac833af466a
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: IqsN_cPeCP6oEXtYQMMWBiUim-r9lxq7YGj_mE3992g
-    short-id: e6d59aff03e5b0
-  servername: dlcdnets.asus.com
-  client-fingerprint: chrome
-- name: 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
+- name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
   server: 60.248.219.78
   port: 443
   udp: true
@@ -68,6 +42,14 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
+- name: 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
+  server: sbgfgov.vip24.wogacnmnagfwgov.com
+  port: 11224
+  udp: true
+  type: vmess
+  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
+  alterId: 2
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -78,7 +60,6 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,6 +70,5 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
+  server: 154.86.30.45
+  port: 24443
+  udp: true
+  type: ss
+  cipher: aes-128-gcm
+  password: bKgENdAl@8Zx3lAc-HK-BD-20260622
+- name: 🇸🇬 新加坡 (Singapore) 02 (家宽) - xiaohe
   server: s3.huhiuh.space
   port: 18642
   udp: true
@@ -18,11 +25,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 02 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 02 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
