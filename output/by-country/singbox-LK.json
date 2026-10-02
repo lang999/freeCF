@@ -6,12 +6,23 @@
     {
       "type": "vless",
       "tag": "🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe",
-      "server": "free.sahanwickramasinghe.me",
-      "server_port": 80,
-      "uuid": "684f9a2e-4f96-497f-bfd9-ff1e34637952",
+      "server": "140.245.120.16",
+      "server_port": 443,
+      "uuid": "92d67828-4c56-4795-af5a-f387651380dc",
+      "tls": {
+        "enabled": true,
+        "server_name": "trackydev.site",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
       "transport": {
         "type": "ws",
-        "path": "/"
+        "headers": {
+          "Host": "trackydev.site"
+        }
       }
     },
     {
@@ -23,7 +34,22 @@
       "tls": {
         "enabled": true,
         "server_name": "free.sahanwickramasinghe.me",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇱🇰 斯里兰卡 (Sri Lanka) 03 - xiaohe",
+      "server": "free.sahanwickramasinghe.me",
+      "server_port": 80,
+      "uuid": "684f9a2e-4f96-497f-bfd9-ff1e34637952",
+      "transport": {
+        "type": "ws",
+        "path": "/"
       }
     },
     {
@@ -32,7 +58,8 @@
       "outbounds": [
         "auto",
         "🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe",
-        "🇱🇰 斯里兰卡 (Sri Lanka) 02 - xiaohe"
+        "🇱🇰 斯里兰卡 (Sri Lanka) 02 - xiaohe",
+        "🇱🇰 斯里兰卡 (Sri Lanka) 03 - xiaohe"
       ]
     },
     {
@@ -40,7 +67,8 @@
       "tag": "auto",
       "outbounds": [
         "🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe",
-        "🇱🇰 斯里兰卡 (Sri Lanka) 02 - xiaohe"
+        "🇱🇰 斯里兰卡 (Sri Lanka) 02 - xiaohe",
+        "🇱🇰 斯里兰卡 (Sri Lanka) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

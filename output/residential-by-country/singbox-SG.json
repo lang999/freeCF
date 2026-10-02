@@ -4,16 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe",
-      "server": "154.86.30.45",
-      "server_port": 24443,
-      "method": "aes-128-gcm",
-      "password": "bKgENdAl@8Zx3lAc-HK-BD-20260622"
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇸🇬 新加坡 (Singapore) 02 (家宽) - xiaohe",
+      "tag": "🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe",
       "server": "s3.huhiuh.space",
       "server_port": 18642,
       "password": "user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2",
@@ -28,16 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe",
-        "🇸🇬 新加坡 (Singapore) 02 (家宽) - xiaohe"
+        "🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe",
-        "🇸🇬 新加坡 (Singapore) 02 (家宽) - xiaohe"
+        "🇸🇬 新加坡 (Singapore) 01 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
