@@ -6,19 +6,26 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
-      "server": "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev",
+      "server": "104.21.36.36",
       "server_port": 443,
-      "uuid": "07821f66-cdb7-4c70-9de6-e230cffac470",
+      "uuid": "41750e18-7143-49a3-bdac-4edcb3c8b8f3",
       "tls": {
         "enabled": true,
-        "server_name": "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev",
-        "insecure": false
+        "server_name": "h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev",
+        "insecure": false,
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/vl/li1khihh3dnitjyzraemspbqvu",
+        "path": "/vl/ml3Epzqnzr8r2cTPtolbD5lTi1GWsZOP?ed=2560",
         "headers": {
-          "Host": "wgrcqwtkfyqujs43.ghydgdbdbddvv.workers.dev"
+          "Host": "h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev"
         }
       }
     },
@@ -34,7 +41,7 @@
         "server_name": "cz1.animeteka.info",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         },
         "reality": {
           "enabled": true,
@@ -44,12 +51,25 @@
       }
     },
     {
+      "type": "hysteria2",
+      "tag": "🇨🇿 捷克 (Czech) 03 - xiaohe",
+      "server": "153.76.190.41",
+      "server_port": 8443,
+      "password": "3a92b39a-5f02-415e-a908-783ec320e83f",
+      "tls": {
+        "enabled": true,
+        "server_name": "speedtestmark.com",
+        "insecure": false
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇨🇿 捷克 (Czech) 01 - xiaohe",
-        "🇨🇿 捷克 (Czech) 02 - xiaohe"
+        "🇨🇿 捷克 (Czech) 02 - xiaohe",
+        "🇨🇿 捷克 (Czech) 03 - xiaohe"
       ]
     },
     {
@@ -57,7 +77,8 @@
       "tag": "auto",
       "outbounds": [
         "🇨🇿 捷克 (Czech) 01 - xiaohe",
-        "🇨🇿 捷克 (Czech) 02 - xiaohe"
+        "🇨🇿 捷克 (Czech) 02 - xiaohe",
+        "🇨🇿 捷克 (Czech) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

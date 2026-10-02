@@ -22,6 +22,19 @@ proxies:
   ws-opts:
     path: /
 - name: 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
+  server: 212.87.190.36
+  port: 443
+  udp: true
+  type: vless
+  uuid: a15d1b88-e3f4-4f4d-9c04-462a2965a60a
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI
+    short-id: 16e0f049
+  servername: ee174.mech-pro.online
+  client-fingerprint: firefox
+- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
   server: 94.183.170.135
   port: 8443
   udp: true
@@ -30,9 +43,8 @@ proxies:
   tls: true
   servername: estproxy4.lockdwn.com
   skip-cert-verify: false
-  client-fingerprint: firefox
-- name: 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
-  server: 143.246.41.123
+- name: 🇪🇪 爱沙尼亚 (Estonia) 05 - xiaohe
+  server: ee.h1cloud.net
   port: 25895
   udp: true
   type: vless
@@ -43,6 +55,19 @@ proxies:
     short-id: a73f0410d728c823
   servername: www.samsung.com
   client-fingerprint: firefox
+- name: 🇪🇪 爱沙尼亚 (Estonia) 06 - xiaohe
+  server: 93.89.220.37
+  port: 443
+  udp: true
+  type: vless
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: lwKaUQ81wJUJRsqAPsfTPj5V_f9N50UYEwzRI_nuq2g
+    short-id: e88cb983f3c97528
+  servername: ibm.com
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
@@ -52,6 +77,8 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 05 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -61,5 +88,7 @@ proxy-groups:
   - 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
   - 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 05 - xiaohe
+  - 🇪🇪 爱沙尼亚 (Estonia) 06 - xiaohe
 rules:
 - MATCH,PROXIES
