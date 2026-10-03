@@ -4,29 +4,40 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
-  server: 50dc16b5-tmm5c0-tmj4pk-1kcpe.hk3.hyhuawei.com
-  port: 443
+- name: 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
+  server: 104.18.46.234
+  port: 2082
   udp: true
-  type: hysteria2
-  password: 3f514ea2-4662-11ed-a8bf-f23c91cfbbc9
-  sni: 50dc16b5-tmm5c0-tmj4pk-1kcpe.hk3.hyhuawei.com
-  skip-cert-verify: true
+  type: vless
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
 - name: 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe
-  server: test.keoplentuio.xyz
+  server: 178.83.46.216
   port: 2053
   udp: true
   type: vless
   uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
 - name: 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  server: 62a43558-tmm5c0-trdynx-1rk9y.nw4.hyhuawei.com
+  server: 6d1cc27c-tmm5c0-ts40sw-14g76.hk3.hyhuawei.com
   port: 443
   udp: true
   type: hysteria2
-  password: 88f6e3c4-1d01-11ef-812c-f23c91cfbbc9
-  sni: 62a43558-tmm5c0-trdynx-1rk9y.nw4.hyhuawei.com
+  password: 4729b4c8-1790-11eb-8684-f23c913c8d2b
+  sni: 6d1cc27c-tmm5c0-ts40sw-14g76.hk3.hyhuawei.com
   skip-cert-verify: true
-- name: 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
+- name: 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
+  server: b85c7e2f-tmm5c0-tvk1qn-19les.nw4.hyhuawei.com
+  port: 443
+  udp: true
+  type: hysteria2
+  password: d095ecc6-7b69-11eb-b77b-f23c913c8d2b
+  sni: b85c7e2f-tmm5c0-tvk1qn-19les.nw4.hyhuawei.com
+  skip-cert-verify: true
+- name: 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe
   server: hinet1.2yly.com
   port: 24215
   udp: true
@@ -36,8 +47,8 @@ proxies:
   reality-opts:
     public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
   servername: addons.mozilla.org
-  client-fingerprint: qq
-- name: 🇸🇬 新加坡 (Singapore) 05 (家宽) - xiaohe
+  client-fingerprint: chrome
+- name: 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
   server: s3.huhiuh.space
   port: 18642
   udp: true
@@ -45,42 +56,39 @@ proxies:
   password: user317_windows:c70565e9-a99f-40ef-b96c-469a3949eed2
   sni: www.bing.com
   skip-cert-verify: true
-- name: 🇯🇵 日本 (Japan) 06 (家宽) - xiaohe
-  server: 43.165.191.60
-  port: 443
+- name: 🇹🇷 土耳其 (Turkey) 07 (移动家宽) - xiaohe
+  server: me17.msjia8844.site
+  port: 7443
   udp: true
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: ju88t.ce8d.q6g.hh.ov0.kdns.fr
-  skip-cert-verify: false
-  client-fingerprint: ios
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers:
-      Host: ju88t.ce8d.q6g.hh.ov0.kdns.fr
+  type: hysteria2
+  password: M8LP9DztTr3znqCkmf-r08CQLBLLFK1r
+  sni: me17.msjia8844.site
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: u3Soh9_Ui0UmcuY6vk0ug8Lq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 06 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 07 (移动家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe
+  - 🇺🇸 美国 (United States) 01 (家宽) - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe
   - 🇭🇰 中国香港 (Hong Kong) 03 (家宽) - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 04 (家宽) - xiaohe
-  - 🇸🇬 新加坡 (Singapore) 05 (家宽) - xiaohe
-  - 🇯🇵 日本 (Japan) 06 (家宽) - xiaohe
+  - 🇭🇰 中国香港 (Hong Kong) 04 (家宽) - xiaohe
+  - 🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe
+  - 🇸🇬 新加坡 (Singapore) 06 (家宽) - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 07 (移动家宽) - xiaohe
 rules:
 - MATCH,PROXIES
