@@ -16,17 +16,35 @@ proxies:
     short-id: 65f01b4b99e52015
   servername: www.cloudflare.com
   client-fingerprint: chrome
+- name: 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
+  server: 64.177.90.30
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
+- name: 🇲🇽 墨西哥 (Mexico) 03 - xiaohe
+  server: 64.177.90.30
+  port: 8388
+  udp: true
+  type: ss
+  cipher: aes-256-gcm
+  password: BWyPPTusFKhGgzKh
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 02 - xiaohe
+  - 🇲🇽 墨西哥 (Mexico) 03 - xiaohe
 rules:
 - MATCH,PROXIES
