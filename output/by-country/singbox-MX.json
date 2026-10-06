@@ -4,23 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "trojan",
       "tag": "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
-      "server": "34.51.23.2",
-      "server_port": 443,
-      "uuid": "79bc7b01-6e4e-4365-a120-fefac8182bd9",
+      "server": "211.20.156.191",
+      "server_port": 28121,
+      "password": "i99Cef",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "vFcM44RcbcO5jcrSWHLd_0exXAnnJLhpCNnMrWCwlzI",
-          "short_id": "65f01b4b99e52015"
-        }
+        "server_name": "ctldl.windowsupdate.com",
+        "insecure": true
       }
     },
     {

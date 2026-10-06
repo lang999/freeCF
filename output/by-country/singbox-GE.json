@@ -6,21 +6,19 @@
     {
       "type": "vless",
       "tag": "🇬🇪 格鲁吉亚 (Georgia) 01 - xiaohe",
-      "server": "185.143.179.179",
-      "server_port": 25026,
-      "uuid": "441a29b2-d9aa-47d5-9209-0a9191479f9f",
-      "flow": "xtls-rprx-vision",
+      "server": "104.21.50.89",
+      "server_port": 443,
+      "uuid": "76ac91c5-ea82-4046-8ee7-2ffbb563ac94",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "RVh0D446O5pKnOqlNkJNxSGGbmzl8swn4YBXYce1HSw",
-          "short_id": "34c465417d7ebca0"
+        "server_name": "geo.shkola112.site",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api-vless",
+        "headers": {
+          "Host": "geo.shkola112.site"
         }
       }
     },

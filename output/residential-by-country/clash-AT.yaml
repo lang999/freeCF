@@ -4,30 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇬🇹 GT 01 - xiaohe
-  server: 185.47.254.251
-  port: 443
+- name: 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
+  server: 31.77.227.6
+  port: 52006
   udp: true
   type: vless
-  uuid: 878fb7f7-fc65-465e-a352-17c7216c6f3d
+  uuid: bc659d88-a1e0-076c-a49a-7b51b26a7a7f
   flow: xtls-rprx-vision
   tls: true
-  reality-opts:
-    public-key: 6-_ZidygR8PRt4gtHlGCAW-PPmjEIm7Wn7MZqJU1z1Q
-    short-id: 6c059ecfddf9b179
-  servername: gateway.icloud.com
+  servername: bigdick.gamegrow.ru
+  skip-cert-verify: false
   client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇬🇹 GT 01 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇬🇹 GT 01 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 01 (家宽) - xiaohe
 rules:
 - MATCH,PROXIES
